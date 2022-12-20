@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="679de0f5-e86a-420d-aa0a-09cfc2a737d8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_2_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_1_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_6_14_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_4_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_7_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_7_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_7_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_7_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_7_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_3_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_3_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/Addr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/CntcMedium.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/Cust.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/CustAcct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/CustTp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/Ind.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/Party.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/PartyRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/PartyRoleTp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/common/EtiyaTypeValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/common/GnlChar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/Party.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <list id="ba1a305a-5945-4af6-a0fc-c010e69de2db" name="Changes by gorkem.acir" comment="">
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/common/GnlSt.java" afterDir="false" />
+    </list>
+    <list id="4332af4c-7fed-48d2-aa4e-9671cf7f15ae" name="Changes by hakan.cetin" comment="">
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/common/RsrcSpec.java" afterDir="false" />
+    </list>
+    <list id="f08d7b2c-0074-4c9d-92c2-28bb2251bd52" name="Changes by kubra.sahin" comment="">
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/common/GnlTp.java" afterDir="false" />
+    </list>
+    <list id="40c99bb7-2b3a-48a2-b352-4f1b6c00a985" name="Changes by mert.soyunmezoglu" comment="">
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/common/SrvcSpec.java" afterDir="false" />
+    </list>
+    <list id="5cf4f08a-ad7a-4318-a3ac-29a4da260f22" name="Changes by sametcan.sertman" comment="">
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/common/GnlCharVal.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2J8pYc5nDMnFqKNpXS0QL1x0kN0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/abdulkadir.demirel/Documents/crm-lite-5/crm-lite",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "66c6f0e4fc7a6211ebd7ed0efccce63a"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "oracle"
+    ]
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="crm-lite-5" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="crm-lite-5" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="679de0f5-e86a-420d-aa0a-09cfc2a737d8" name="Changes" comment="" />
+      <created>1671469615182</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1671469615182</updated>
+      <workItem from="1671469618220" duration="11653000" />
+      <workItem from="1671520657797" duration="586000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
