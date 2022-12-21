@@ -27,13 +27,13 @@ public abstract class BaseEntity {
 
     @PrePersist
     public void onCreate() {
-        this.cUser = 1L;
+        this.cUser = 8L;
         this.cDate = LocalDateTime.now();
     }
 
     @PreUpdate
     public void onUpdate() {
-        this.uUser = 1L;
+        this.uUser = 8L;
         this.uDate = LocalDateTime.now();
     }
 }
