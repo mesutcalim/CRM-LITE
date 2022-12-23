@@ -1,0 +1,7 @@
+package com.etiya.crmlite.business.concretes.prod;
+
+import com.etiya.crmlite.business.abstracts.prod.IProductSpecificationResourceSpecificationService;
+
+public class ProductSpecificationResourceSpecificationManager implements IProductSpecificationResourceSpecificationService
+{
+}
