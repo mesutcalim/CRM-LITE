@@ -10,11 +10,11 @@ import lombok.NoArgsConstructor;
 public class FindCustomerRequest {
     private Long natId;
     private Long customerId;
-    private Long acctNo;
-    private String cntcData;
+    private String accountNo;
+    private String gsmNumber;
     private String firstName;
     private String lastName;
-    private Long orderId;
+    private Long customerOrderId;
 
 
 }

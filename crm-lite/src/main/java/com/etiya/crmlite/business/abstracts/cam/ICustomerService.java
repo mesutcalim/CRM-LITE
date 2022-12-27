@@ -1,8 +1,10 @@
 package com.etiya.crmlite.business.abstracts.cam;
 
+import com.etiya.crmlite.business.dtos.requests.cam.customers.CreateCustomerRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.customers.FindCustomerRequest;
 import com.etiya.crmlite.business.dtos.responses.cam.customers.FindCustomerResponse;
 import com.etiya.crmlite.core.util.results.DataResult;
+import com.etiya.crmlite.core.util.results.Result;
 import com.etiya.crmlite.entities.concretes.cam.Cust;
 
 import java.util.List;
@@ -20,7 +22,7 @@ public interface ICustomerService {
 //     Role
 //     NatID
 
-    void addCust(Cust cust);//Bu fonksiyon içine request almalıdır.
+     Result addCustomer(CreateCustomerRequest createCustomerRequest);//Bu fonksiyon içine request almalıdır.
     //todo:Bu request şunları içermelidir.
     // First Name (zorunlu alan)
     // Middle Name
