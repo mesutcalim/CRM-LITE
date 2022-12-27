@@ -34,6 +34,4 @@ public class PartyRoleTp extends BaseEntity {
 
     @OneToMany(mappedBy = "partyRoleTp")
     private List<PartyRole> partyRoles;
-
-
 }

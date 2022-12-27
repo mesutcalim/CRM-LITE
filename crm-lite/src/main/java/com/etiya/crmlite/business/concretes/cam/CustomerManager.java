@@ -1,45 +1,30 @@
 package com.etiya.crmlite.business.concretes.cam;
 
+import com.etiya.crmlite.business.dtos.requests.cam.customers.FindCustomerRequest;
+import com.etiya.crmlite.business.dtos.responses.cam.customers.FindCustomerResponse;
+import com.etiya.crmlite.core.util.results.DataResult;
+import com.etiya.crmlite.core.util.results.SuccessDataResult;
 import com.etiya.crmlite.entities.concretes.cam.Cust;
 import com.etiya.crmlite.business.abstracts.cam.ICustomerService;
+import com.etiya.crmlite.repositories.cam.ICustomerRepository;
 
 import java.util.List;
 
 public class CustomerManager implements ICustomerService {
-    @Override
-    public Cust getById() {
-        return null;
-    }
 
-    @Override
-    public Cust getByNatId() {
-        return null;
-    }
+    private ICustomerRepository customerRepository;
 
-    @Override
-    public List<Cust> getByAcctNo() {
-        return null;
-    }
+    public DataResult<List<FindCustomerResponse>> getCustomersByFilter(FindCustomerRequest findCustomerRequest) {
+        List<FindCustomerResponse> result = this.customerRepository.getCustomersByFilter(
+                findCustomerRequest.getNatId(),
+                findCustomerRequest.getCustomerId(),
+                findCustomerRequest.getAcctNo(),
+                findCustomerRequest.getCntcData(),
+                findCustomerRequest.getFirstName(),
+                findCustomerRequest.getLastName(),
+                findCustomerRequest.getOrderId());
 
-    @Override
-    public Cust getByPhoneNumber() {
-        return null;
-    }
-
-    @Override
-    public List<Cust> getByNFirstName() {
-        return null;
-    }
-
-    @Override
-    public List<Cust> getByLastName() {
-        return null;
-    }
-
-    @Override
-    public List<Cust> getByOrderNumber() {
-        return null;
-    }
+        return new SuccessDataResult<>(result);
 
     @Override
     public void addCust(Cust cust) {

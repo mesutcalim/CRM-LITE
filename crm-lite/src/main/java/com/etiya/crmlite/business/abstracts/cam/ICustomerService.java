@@ -1,5 +1,8 @@
 package com.etiya.crmlite.business.abstracts.cam;
 
+import com.etiya.crmlite.business.dtos.requests.cam.customers.FindCustomerRequest;
+import com.etiya.crmlite.business.dtos.responses.cam.customers.FindCustomerResponse;
+import com.etiya.crmlite.core.util.results.DataResult;
 import com.etiya.crmlite.entities.concretes.cam.Cust;
 
 import java.util.List;
@@ -7,13 +10,7 @@ import java.util.List;
 public interface ICustomerService {
 
     //Kullanıcı, filtreleme alanlarından(NatID, Customer ID, Account Number, GSM Number, First Name, Last Name, Order Name) en az birini doldurana kadar “search” butonu pasif kalmalı.
-    Cust getById();
-    Cust getByNatId();
-    List<Cust> getByAcctNo();
-    Cust getByPhoneNumber(); // Telefon numarası veri tabanında yok.
-    List<Cust> getByNFirstName();
-    List<Cust> getByLastName();
-    List<Cust> getByOrderNumber();
+    DataResult<List<FindCustomerResponse>> getCustomersByFilter(FindCustomerRequest findCustomerRequest);
 
 //    todo:Bu foksiyonların getirmesi gereken response şunları içermelidir:
 //     Customer ID

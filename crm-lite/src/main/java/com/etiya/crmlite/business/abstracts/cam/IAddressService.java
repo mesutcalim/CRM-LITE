@@ -2,6 +2,8 @@ package com.etiya.crmlite.business.abstracts.cam;
 
 import com.etiya.crmlite.entities.concretes.cam.Addr;
 
+import java.util.List;
+
 public interface IAddressService {
     void addAddress(Addr addr);
     //todo: bu fonksiyon içine addres request almalı ve void yerine bir data result dönmelidir.
@@ -13,6 +15,7 @@ public interface IAddressService {
     // Address Description (zorunlu alan) içermelidir.
     // Addres Title yazılmadıysa sistem tarafından “Address 1, Address 2, Address N” şeklinde sıralı
     // bir isimlendirme ataması yapılmalıdır.
+
 
     void deleteAddress(int address_id);
     Addr updateAddress(int address_id);
