@@ -44,7 +44,7 @@ public class Ind extends BaseEntity {
     private String fthrName;
 
     @Column(name = "NAT_ID")
-    private int natId;
+    private Long natId;
 
     @Column(name = "ST_ID")
     private Long stId;

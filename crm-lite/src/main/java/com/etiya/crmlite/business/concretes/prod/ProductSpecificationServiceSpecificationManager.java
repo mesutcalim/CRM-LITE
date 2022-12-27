@@ -1,6 +1,12 @@
 package com.etiya.crmlite.business.concretes.prod;
 
 import com.etiya.crmlite.business.abstracts.prod.IProductSpecificationServiceSpecificationService;
+import com.etiya.crmlite.repositories.prod.IProductSpecificationServiceSpecificationRepository;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
+@Service
+@AllArgsConstructor
 public class ProductSpecificationServiceSpecificationManager implements IProductSpecificationServiceSpecificationService {
+    IProductSpecificationServiceSpecificationRepository productSpecificationServiceSpecificationRepository;
 }

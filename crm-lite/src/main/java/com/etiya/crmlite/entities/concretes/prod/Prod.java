@@ -3,6 +3,7 @@ package com.etiya.crmlite.entities.concretes.prod;
 import com.etiya.crmlite.entities.abstracts.BaseEntity;
 import com.etiya.crmlite.entities.concretes.cam.CustAcctProdInvl;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -14,6 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name = "PROD")
+@Builder
 public class Prod extends BaseEntity {
     @Id
     @SequenceGenerator(name = "prodSeq", sequenceName = "PROD_SEQ", allocationSize = 1)

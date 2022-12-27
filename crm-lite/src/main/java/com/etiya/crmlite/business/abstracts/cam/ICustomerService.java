@@ -33,7 +33,7 @@ public interface ICustomerService {
     // Mother Name
     // Nationality ID
 
-    Cust updateCust(Long cust_id);
+    Result updateCust(Long cust_id,FindCustomerRequest findCustomerRequest);
     //todo:Kullanıcı, Customer Info Update sayfasında aşağıdaki alanları güncelleyebilmedir.Mock-up eklenecek ve çizilecek
     // First Name (zorunlu alan)
     // Middle Name
@@ -46,7 +46,7 @@ public interface ICustomerService {
 
     // EC-10 da 3.madde yanlış.Analiz grubu ile konuşulacak.
 
-    void deleteCust(Long cust_id);
+    Result deleteCust(Long cust_id);
     //todo:   Eğer aktif bir ürünleri sorgulanacak(get fonksiyonu yazılacak yada başka servisten çağırılacak) varsa
     // “Since the customer has active products, the customer cannot be deleted.” Uyarı mesajı popup şeklinde gösterilebilmelidir.
     // Eğer aktif bir ürünü yoksa müşteri silinecek.

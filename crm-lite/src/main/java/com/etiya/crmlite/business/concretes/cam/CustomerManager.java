@@ -5,14 +5,21 @@ import com.etiya.crmlite.business.dtos.requests.cam.customers.FindCustomerReques
 import com.etiya.crmlite.business.dtos.responses.cam.customers.FindCustomerResponse;
 import com.etiya.crmlite.core.util.mapper.ModelMapperService;
 import com.etiya.crmlite.core.util.results.DataResult;
+import com.etiya.crmlite.core.util.results.ErrorDataResult;
 import com.etiya.crmlite.core.util.results.Result;
 import com.etiya.crmlite.core.util.results.SuccessDataResult;
 import com.etiya.crmlite.entities.concretes.cam.Cust;
 import com.etiya.crmlite.business.abstracts.cam.ICustomerService;
+import com.etiya.crmlite.entities.concretes.prod.Prod;
 import com.etiya.crmlite.repositories.cam.ICustomerRepository;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
+@Service
+@AllArgsConstructor
 public class CustomerManager implements ICustomerService {
 
     private ICustomerRepository customerRepository;
@@ -28,7 +35,7 @@ public class CustomerManager implements ICustomerService {
                 findCustomerRequest.getCustomerOrderId(),
                 findCustomerRequest.getAccountNo());
 
-        return new SuccessDataResult<>(result);
+        return new SuccessDataResult<List<FindCustomerResponse>>("başarılı",result);
     }
     @Override
     public Result addCustomer(CreateCustomerRequest createCustomerRequest) {
@@ -45,13 +52,41 @@ public class CustomerManager implements ICustomerService {
 
 
     @Override
-    public Cust updateCust(Long cust_id) {
-        return null;
+    public Result updateCust(Long cust_id,FindCustomerRequest findCustomerRequest) {
+
+        Cust customer = customerRepository.findById(cust_id).orElseThrow();
+        //todo: orElseThrow yerine business exception yazılacak.
+        customer = modelMapperService.getMapperforRequest()
+                .map(findCustomerRequest , Cust.class);
+
+        customerRepository.save(customer);//update işleminin veri tabanına işlemesi için save methodu çağırdık.
+        //zaten id ye göre var olan bir müşteri eklenmez güncellenir!!
+
+        return new SuccessDataResult("Müşteri başarı ile güncellendi.");
     }
 
     @Override
-    public void deleteCust(Long cust_id) {
+    public Result deleteCust(Long cust_id) {
+        Cust customer = customerRepository.findById(cust_id).orElseThrow();
 
+        if(canBeDeleted(customer)) {
+            customer.setStId(84L);
+            customerRepository.save(customer);
+            return new SuccessDataResult("Müşteri başarı ile silindi.");
+        }
+        else{
+            return new ErrorDataResult("Müşteri silinemedi.Aktif,Beklemede yada Askıda ürünü mevcut.");
+        }
+    }
+
+    private boolean canBeDeleted(Cust cust){
+
+        if( customerRepository.checkActiveProduct(cust.getCustId()).isEmpty())
+        {
+            return true;//silinebilir
+        }else {
+            return false;
+        }
     }
 }
 

@@ -5,101 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="679de0f5-e86a-420d-aa0a-09cfc2a737d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy-datasource.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_yaml_2_13_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_13_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_13_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_13_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_oracle_database_jdbc_ojdbc8_21_5_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_oracle_database_nls_orai18n_21_8_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_classgraph_classgraph_4_8_149.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_core_v3_swagger_annotations_2_2_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_core_v3_swagger_core_2_2_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_core_v3_swagger_models_2_2_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_4_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_17_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_17_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_69.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_69.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_69.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_22_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_2_5_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_3_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_modelmapper_modelmapper_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_36.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springdoc_springdoc_openapi_common_1_6_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springdoc_springdoc_openapi_ui_1_6_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springdoc_springdoc_openapi_webmvc_core_1_6_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_7_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_7_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_7_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_7_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_7_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_7_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_7_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_7_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_7_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_7_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_7_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_7_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_3_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_swagger_ui_4_15_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_webjars_locator_core_0_50.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.jpb/persistence-units.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/crm-lite-5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/crm-lite-5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/order/businessInteractionStatuses/CreateBusinessInteractionStatusRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/api/controllers/cam/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/api/controllers/cam/CustomerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/ICustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/ContactMediumManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/ContactMediumManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/CustomerAccountManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/CustomerAccountManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/CustomerAccountProductInvolvementManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/CustomerAccountProductInvolvementManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/CustomerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/CustomerManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/cam/customers/FindCustomerRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/cam/customers/FindCustomerRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/CustomerTypeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/CustomerTypeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/IndividualManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/IndividualManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/PartyRoleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/PartyRoleManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/common/EtiyaTypeValueManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/common/EtiyaTypeValueManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/order/BusinessInteractionItemManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/order/BusinessInteractionItemManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/order/BusinessInteractionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/order/BusinessInteractionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/order/BusinessInteractionSpecificationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/order/BusinessInteractionSpecificationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/order/BusinessInteractionStatusManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/order/BusinessInteractionStatusManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/order/BusinessInteractionTypeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/order/BusinessInteractionTypeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/order/CustomerOrderCharacteristicValueManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/order/CustomerOrderCharacteristicValueManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/order/CustomerOrderItemManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/order/CustomerOrderItemManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/order/CustomerOrderManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/order/CustomerOrderManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/responses/cam/customers/FindCustomerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/responses/cam/customers/FindCustomerResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/Addr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/Ind.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/Ind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/prod/Prod.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/prod/Prod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/cam/ICustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/cam/ICustomerRepository.java" afterDir="false" />
     </list>
     <list id="ba1a305a-5945-4af6-a0fc-c010e69de2db" name="Changes by gorkem.acir" comment="" />
@@ -107,6 +38,54 @@
     <list id="f08d7b2c-0074-4c9d-92c2-28bb2251bd52" name="Changes by kubra.sahin" comment="" />
     <list id="40c99bb7-2b3a-48a2-b352-4f1b6c00a985" name="Changes by mert.soyunmezoglu" comment="" />
     <list id="5cf4f08a-ad7a-4318-a3ac-29a4da260f22" name="Changes by sametcan.sertman" comment="" />
+    <list id="38120318-0c6b-4625-9ec2-fcfa68d29341" name="Changes by veysel.kurnaz" comment="">
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/order/businessInteractionStatuses/DeleteBusinessInteractionStatusRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/order/businessInteractionStatuses/UpdateBusinessInteractionStatusRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/order/businessInteractionTypes/CreateBusinessInteractionTypeRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/order/businessInteractionTypes/DeleteBusinessInteractionTypeRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/order/businessInteractionTypes/UpdateBusinessInteractionTypeRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/order/customerOrderCharacterValues/CreateCustomerOrderCharacterValueRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/order/customerOrderCharacterValues/DeleteCustomerOrderCharacterValueRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/order/customerOrderCharacterValues/UpdateCustomerOrderCharacterValueRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/order/customerOrderItems/CreateCustomerOrderItemRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/order/customerOrderItems/DeleteCustomerOrderItemRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/order/customerOrderItems/UpdateCustomerOrderItemRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/order/customerOrders/CreateCustomerOrderRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/order/customerOrders/DeleteCustomerOrderRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/order/customerOrders/UpdateCustomerOrderRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/product/campaignProductOffers/CreateCampaignProductOfferRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/product/campaignProductOffers/DeleteCampaignProductOfferRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/product/campaignProductOffers/UpdateCampaignProductOfferRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/product/campaigns/CreateCampaignRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/product/campaigns/DeleteCampaignRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/product/campaigns/UpdateCampaignRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/product/productCatalogProductOffers/CreateProductCatalogProductOfferRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/product/productCatalogProductOffers/DeleteProductCatalogProductOfferRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/product/productCatalogProductOffers/UpdateProductCatalogProductOfferRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/product/productCatalogs/CreateProductCatalogRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/PartyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/PartyManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/PartyRoleTypeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/PartyRoleTypeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/common/GeneralCharacteristicManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/common/GeneralCharacteristicManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/common/GeneralCharacteristicValueManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/common/GeneralCharacteristicValueManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/common/GeneralStatusManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/common/GeneralStatusManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/common/GeneralTypeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/common/GeneralTypeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/common/ResourceSpecificationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/common/ResourceSpecificationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/common/ServiceSpecificationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/common/ServiceSpecificationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/CampaignManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/CampaignManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/CampaignProductOfferingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/CampaignProductOfferingManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductCatalogManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductCatalogManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductCatalogProductOfferingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductCatalogProductOfferingManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductCharacteristicValueManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductCharacteristicValueManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductOfferingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductOfferingManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductRelationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductRelationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductSpecificationCharacteristicUseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductSpecificationCharacteristicUseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductSpecificationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductSpecificationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductSpecificationResourceSpecificationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductSpecificationResourceSpecificationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductSpecificationServiceSpecificationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductSpecificationServiceSpecificationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/common/generalCharacterValues/CreateGeneralCharacterValueRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/common/generalCharacterValues/CreateGeneralCharacterValueRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/responses/cam/customers/FindCustomerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/responses/cam/customers/FindCustomerResponse.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,6 +103,16 @@
   </component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/responses/cam/customers/FindCustomerResponse.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="3" changelist="38120318-0c6b-4625-9ec2-fcfa68d29341" />
+        <range start1="3" end1="3" start2="4" end2="8" changelist="38120318-0c6b-4625-9ec2-fcfa68d29341" />
+        <range start1="4" end1="4" start2="9" end2="13" changelist="38120318-0c6b-4625-9ec2-fcfa68d29341" />
+        <range start1="10" end1="11" start2="19" end2="20" changelist="679de0f5-e86a-420d-aa0a-09cfc2a737d8" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -147,10 +136,17 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelOrder2": "2",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RequestMappingsPanelWidth2": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "corretto-17",
     "last_opened_file_path": "C:/Users/mesut.calim/Downloads/crm4",
     "nodejs_package_manager_path": "npm",
     "spring.configuration.checksum": "66c6f0e4fc7a6211ebd7ed0efccce63a"
@@ -180,7 +176,7 @@
       <updated>1671469615182</updated>
       <workItem from="1671469618220" duration="11653000" />
       <workItem from="1671520657797" duration="586000" />
-      <workItem from="1672131222481" duration="4370000" />
+      <workItem from="1672131222481" duration="17316000" />
     </task>
     <servers />
   </component>
