@@ -2,6 +2,7 @@ package com.etiya.crmlite.entities.concretes.cam;
 
 import com.etiya.crmlite.entities.abstracts.BaseEntity;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,6 +13,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "PARTY_ROLE")
+@Builder
 public class PartyRole extends BaseEntity {
     @Id
     @SequenceGenerator(name = "partyRoleSeq", sequenceName = "PARTY_ROLE_SEQ", allocationSize = 1)

@@ -2,6 +2,7 @@ package com.etiya.crmlite.entities.concretes.cam;
 
 import com.etiya.crmlite.entities.abstracts.BaseEntity;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -14,6 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name = "CUST_ACCT")
+@Builder
 public class CustAcct extends BaseEntity {
     @Id
     @SequenceGenerator(name = "custAcctSeq", sequenceName = "CUST_ACCT_SEQ", allocationSize = 1)

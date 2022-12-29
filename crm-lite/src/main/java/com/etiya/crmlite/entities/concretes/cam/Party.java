@@ -12,6 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name = "PARTY")
+@Builder
 public class Party extends BaseEntity {
     @Id
     @SequenceGenerator(name = "partySeq", sequenceName = "PARTY_SEQ", allocationSize = 1)

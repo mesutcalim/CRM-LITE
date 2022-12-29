@@ -33,6 +33,7 @@ public abstract class BaseEntity {
 
     @PreUpdate
     public void onUpdate() {
+        this.cUser = 8L;
         this.uUser = 8L;
         this.uDate = LocalDateTime.now();
     }

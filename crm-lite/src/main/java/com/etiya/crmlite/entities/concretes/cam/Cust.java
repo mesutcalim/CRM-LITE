@@ -2,6 +2,7 @@ package com.etiya.crmlite.entities.concretes.cam;
 
 import com.etiya.crmlite.entities.abstracts.BaseEntity;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,6 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name = "CUST")
+@Builder
 public class Cust extends BaseEntity {
 
     @Id

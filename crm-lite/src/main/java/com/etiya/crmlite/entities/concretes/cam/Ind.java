@@ -11,6 +11,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Entity
 @Table(name = "IND")
+@Builder
 public class Ind extends BaseEntity {
     @Id
     @SequenceGenerator(name = "indSeq", sequenceName = "IND_SEQ", allocationSize = 1)
@@ -35,7 +36,7 @@ public class Ind extends BaseEntity {
     private LocalDate brthDate;
 
     @Column(name = "GENDR_ID")
-    private int gendrId;
+    private int genderId;
 
     @Column(name = "MTHR_NAME")
     private String mthrName;

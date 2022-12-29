@@ -2,6 +2,7 @@ package com.etiya.crmlite.entities.concretes.cam;
 
 import com.etiya.crmlite.entities.abstracts.BaseEntity;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,6 +13,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "CNTC_MEDIUM")
+@Builder
 public class CntcMedium extends BaseEntity {
     @Id
     @SequenceGenerator(name = "cntcMediumSeq", sequenceName = "CNTC_MEDIUM_SEQ", allocationSize = 1)

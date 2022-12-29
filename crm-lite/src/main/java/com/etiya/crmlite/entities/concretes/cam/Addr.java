@@ -2,13 +2,17 @@ package com.etiya.crmlite.entities.concretes.cam;
 
 import com.etiya.crmlite.entities.abstracts.BaseEntity;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 @Entity
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="ADDR")
+@Builder
 public class Addr extends BaseEntity {
     @Id
     @SequenceGenerator(name = "addrSeq", sequenceName = "ADDR_SEQ", allocationSize = 1)
