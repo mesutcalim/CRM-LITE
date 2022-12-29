@@ -3,11 +3,11 @@ package com.etiya.crmlite.api.controllers.cam;
 import com.etiya.crmlite.business.abstracts.cam.ICustomerService;
 import com.etiya.crmlite.business.dtos.requests.cam.customers.CreateCustomerRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.customers.FindCustomerRequest;
+import com.etiya.crmlite.business.dtos.requests.cam.customers.UpdateCustomerRequest;
 import com.etiya.crmlite.business.dtos.responses.cam.customers.FindCustomerResponse;
 import com.etiya.crmlite.core.util.results.DataResult;
 import com.etiya.crmlite.core.util.results.Result;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,17 +18,21 @@ import java.util.List;
 @RequestMapping("/api/cam/customers")
 @AllArgsConstructor
 public class CustomerController {
-    @Autowired
+
     private ICustomerService customerService;
 
+//   @PostMapping("/add")
+//    public ResponseEntity<Result> addCustomer(@RequestBody CreateCustomerRequest createCustomerRequest){
+//        return new ResponseEntity<>(customerService.addCustomer(createCustomerRequest), HttpStatus.CREATED);
+//    }
     @PostMapping("/add")
-    public ResponseEntity<Result> addCustomer(@RequestBody CreateCustomerRequest createCustomerRequest){
-        return new ResponseEntity<>(customerService.addCustomer(createCustomerRequest), HttpStatus.CREATED);
+    public Result add(@RequestBody CreateCustomerRequest createCustomerRequest) {
+        return this.customerService.add(createCustomerRequest);
     }
 
     @PostMapping("/update")
-    public ResponseEntity<Result> updateCustomer(@RequestParam Long customerId, @RequestBody FindCustomerRequest findCustomerRequest){
-        return new ResponseEntity<>(customerService.updateCust(customerId,findCustomerRequest),HttpStatus.OK);
+    public ResponseEntity<Result> updateCust(@RequestBody UpdateCustomerRequest updateCustomerRequest){
+        return new ResponseEntity<>(customerService.updateCustomer(updateCustomerRequest),HttpStatus.OK);
     }
 
     @PostMapping("/delete")
@@ -45,7 +49,7 @@ public class CustomerController {
             @RequestParam(value = "firstName" , required = false) String firstName,
             @RequestParam(value = "lastName" , required = false) String lastName,
             @RequestParam(value = "customerOrderId" , required = false) Long customerOrderId){
-        FindCustomerRequest findCustomerRequest = new FindCustomerRequest(natId,customerId,accountNo,gsmNumber,firstName,lastName,customerOrderId);
-        return customerService.getCustomersByFilter(findCustomerRequest);
+
+        return customerService.getCustomersByFilter(customerId, firstName, lastName, natId,gsmNumber, customerOrderId, accountNo);
     }
 }
