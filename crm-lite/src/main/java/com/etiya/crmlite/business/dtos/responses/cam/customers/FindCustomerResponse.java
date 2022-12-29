@@ -16,6 +16,8 @@ public class FindCustomerResponse {
     private String frstName;
     private String mName;
     private String lstName;
-    private PartyRole partyRole;
+    private String partyRoleName;
     private Long natId;
+
+
 }

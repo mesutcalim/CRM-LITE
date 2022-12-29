@@ -11,15 +11,15 @@ import lombok.NoArgsConstructor;
 @Builder
 public class CreateCustomerAccountRequest {
 
-    //private Long customerAccountId;
+    private Long customerAccountId;
 
-    //private String accountNo;
+    private String accountNo;
 
-    //private String accountName;
+    private String accountName;
 
-    //private Long statusId;
+    private Long statusId;
 
-    //private Long accountTypeId ; // accountType'a ait bir tablo yok.
+    private Long accountTypeId ; // accountType'a ait bir tablo yok.
 
     private Long customerId;
 
