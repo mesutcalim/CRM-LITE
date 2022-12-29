@@ -2,22 +2,23 @@ package com.etiya.crmlite.entities.concretes.common;
 
 import com.etiya.crmlite.entities.abstracts.BaseEntity;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
-@Table(name="GNL_TP")
+@Table(name = "GNL_TP")
+@Builder
 public class GnlTp extends BaseEntity {
-
-    @SequenceGenerator(name = "gnlTpSeq", sequenceName = "GNL_TP_SEQ", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "gnlTpSeq")
-    @Column(name="GNL_TP_ID")
     @Id
+    @SequenceGenerator(name = "gnlTpSeq", sequenceName = "GNL_TP_SEQ", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "gnlTpSeq")
+    @Column(name = "GNL_TP_ID")
     private Long gnlTpId;
 
     @Column(name = "NAME")
@@ -37,5 +38,6 @@ public class GnlTp extends BaseEntity {
 
     @Column(name = "IS_ACTV")
     private int isActv;
+
 
 }

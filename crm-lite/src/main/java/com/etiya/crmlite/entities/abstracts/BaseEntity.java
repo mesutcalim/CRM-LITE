@@ -10,10 +10,9 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import java.time.LocalDateTime;
 
-
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @MappedSuperclass
 public abstract class BaseEntity {
     @Column(name = "CDATE")
@@ -24,17 +23,19 @@ public abstract class BaseEntity {
     private LocalDateTime uDate;
     @Column(name = "UUSER")
     private Long uUser;
+   // private int statusId;
 
     @PrePersist
-    public void onCreate() {
-        this.cUser = 8L;
-        this.cDate = LocalDateTime.now();
+    public void onCreate(){
+        this.cDate=LocalDateTime.now();
+        this.cUser=8L;
     }
 
     @PreUpdate
-    public void onUpdate() {
-        this.cUser = 8L;
-        this.uUser = 8L;
-        this.uDate = LocalDateTime.now();
+    public void onUpdate(){
+        this.uUser=8L;
+        this.cUser=8L;
+        this.uDate=LocalDateTime.now();
     }
+
 }

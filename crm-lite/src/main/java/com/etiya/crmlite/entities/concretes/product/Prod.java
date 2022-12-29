@@ -1,4 +1,4 @@
-package com.etiya.crmlite.entities.concretes.prod;
+package com.etiya.crmlite.entities.concretes.product;
 
 import com.etiya.crmlite.entities.abstracts.BaseEntity;
 import com.etiya.crmlite.entities.concretes.cam.CustAcctProdInvl;
@@ -11,32 +11,17 @@ import javax.persistence.*;
 import java.util.List;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "PROD")
 @Builder
 public class Prod extends BaseEntity {
     @Id
+    @Column(name = "PROD_ID")
     @SequenceGenerator(name = "prodSeq", sequenceName = "PROD_SEQ", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "prodSeq")
-    @Column(name = "PROD_ID")
     private Long prodId;
-
-    @OneToMany(mappedBy = "parentProd")
-    private List<Prod> childProdList;
-
-    @ManyToOne
-    @JoinColumn(name = "PRNT_PROD_ID")
-    private Prod parentProd;
-
-    @ManyToOne
-    @JoinColumn(name = "PROD_OFR_ID")
-    private ProdOfr prodOfr;
-
-    @ManyToOne
-    @JoinColumn(name = "PROD_SPEC_ID")
-    private ProdSpec prodSpec;
 
     @Column(name = "NAME")
     private String name;
@@ -47,11 +32,32 @@ public class Prod extends BaseEntity {
     @Column(name = "TRNSC_ID")
     private Long trnscId;
 
-    @Column(name = "CMPG_ID")
-    private Long cmpgId;
+    @Column(name="ST_ID")
+    private int stId;
 
-    @Column(name = "ST_ID")
-    private Long stId;
+    @Column(name = "CMPG_ID")
+    private Long cmpgId; // --> (FK) Campaign tablosundan referans alıyor DİKKAT !!!
+
+    @ManyToOne
+    @JoinColumn(name = "PROD_OFR_ID")
+    private ProdOfr prodOfr;
+
+    @ManyToOne
+    @JoinColumn(name = "PROD_SPEC_ID")
+    private ProdSpec prodSpec;
+
+    @OneToMany(mappedBy = "prod")
+    private List<CustAcctProdInvl> custAcctProdInvls;
+
+    @OneToMany(mappedBy = "prod",cascade = CascadeType.ALL)
+    private List<ProdCharVal> prodCharVal;
+
+    @OneToMany(mappedBy = "prod")
+    private List<Prod> prods;
+
+    @ManyToOne
+    @JoinColumn(name = "PRNT_PROD_ID", referencedColumnName = "PROD_ID")
+    private Prod prod;
 
     @OneToMany(mappedBy = "prod1")
     private List<ProdRel> prodRels1;
@@ -59,10 +65,7 @@ public class Prod extends BaseEntity {
     @OneToMany(mappedBy = "prod2")
     private List<ProdRel> prodRels2;
 
-    @OneToMany(mappedBy = "prod")
-    private List<CustAcctProdInvl> custAcctProdInvls;
-
-    @OneToMany(mappedBy = "prod")
-    private List<ProdCharVal> prodCharVals;
+    // Test Comment Emre
+    // Test Comment Feride
 
 }

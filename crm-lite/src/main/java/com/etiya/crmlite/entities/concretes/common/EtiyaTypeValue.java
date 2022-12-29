@@ -1,28 +1,29 @@
 package com.etiya.crmlite.entities.concretes.common;
 
-import com.etiya.crmlite.entities.abstracts.BaseEntity;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "ETIYA_TYPE_VALUE")
-public class EtiyaTypeValue  {
+@Builder
+public class EtiyaTypeValue {
     @Id
-    @SequenceGenerator(name = "etiyaTypeValueSeq", sequenceName = "TYPE_VALUE_SEQ", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "etiyaTypeValueSeq")
+    @SequenceGenerator(name = "typeValueSeq", sequenceName = "TYPE_VALUE_SEQ", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "typeValueSeq")
     @Column(name = "TYPE_VALUE_ID")
     private Long typeValueId;
 
     @Column(name = "TABLE_NAME")
     private String tableName;
 
-    @Column(name = "FIELD_NAME")
+    @Column(name = "FIELD_NAME", unique = true)
     private int fieldName;
 
     @Column(name = "DESCRIPTION")

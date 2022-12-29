@@ -1,18 +1,21 @@
 package com.etiya.crmlite.entities.concretes.common;
 
 import com.etiya.crmlite.entities.abstracts.BaseEntity;
-import com.etiya.crmlite.entities.concretes.prod.ProdSpecRsrcSpec;
-import com.etiya.crmlite.entities.concretes.prod.ProdSpecSrvcSpec;
-import lombok.*;
+import com.etiya.crmlite.entities.concretes.product.ProdSpecSrvcSpec;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "SRVC_SPEC")
+@Builder
 public class SrvcSpec extends BaseEntity {
     @Id
     @SequenceGenerator(name = "srvcSpecSeq", sequenceName = "SRVC_SPEC_SEQ", allocationSize = 1)
@@ -34,5 +37,4 @@ public class SrvcSpec extends BaseEntity {
 
     @OneToMany(mappedBy = "srvcSpec")
     private List<ProdSpecSrvcSpec> prodSpecSrvcSpecs;
-
 }

@@ -9,21 +9,20 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "PARTY_ROLE")
 @Builder
 public class PartyRole extends BaseEntity {
     @Id
+    @Column(name ="PARTY_ROLE_ID")
     @SequenceGenerator(name = "partyRoleSeq", sequenceName = "PARTY_ROLE_SEQ", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "partyRoleSeq")
-    @Column(name = "PARTY_ROLE_ID")
     private Long partyRoleId;
 
-    @Column(name = "ST_ID")
+    @Column(name="ST_ID")
     private Long stId;
-
 
     @ManyToOne
     @JoinColumn(name = "PARTY_ID")
@@ -35,6 +34,4 @@ public class PartyRole extends BaseEntity {
 
     @OneToOne(mappedBy = "partyRole")
     private Cust cust;
-
-
 }

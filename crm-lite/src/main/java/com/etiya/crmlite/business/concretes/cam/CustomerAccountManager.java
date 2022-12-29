@@ -31,7 +31,7 @@ public class CustomerAccountManager implements ICustomerAccountService {
         List<CustAcct> result = this.customerAccountRepository.findAll();
         List<GetAllCustomerAccountResponse> response = result.stream().map(custAcct -> GetAllCustomerAccountResponse.builder()
                 .customerAccountId(custAcct.getCustAcctId())
-                .accountName(custAcct.getAcctName())
+                .accountName(custAcct.getAccountName())
                 .statusId(custAcct.getStId())
                 .accountNo(custAcct.getAcctNo())
                 .accountTypeId(custAcct.getAcctTpId())
@@ -46,7 +46,7 @@ public class CustomerAccountManager implements ICustomerAccountService {
         CustAcct result = this.customerAccountRepository.findById(id).get();
         GetByIdCustomerAccountResponse response= GetByIdCustomerAccountResponse.builder()
                 .customerAccountId(result.getCustAcctId())
-                .accountName(result.getAcctName())
+                .accountName(result.getAccountName())
                 .statusId(result.getStId())
                 .accountNo(result.getAcctNo())
                 .accountTypeId(result.getAcctTpId())
@@ -58,7 +58,7 @@ public class CustomerAccountManager implements ICustomerAccountService {
         Cust cust= this.customerService.getByCustomerId(createCustomerAccountRequest.getCustomerId());
         CustAcct custAcct = CustAcct.builder()
                 .acctNo(createCustomerAccountRequest.getCustomerId().toString())
-                .acctName("Müşteri Hesabı")
+                .accountName("Müşteri Hesabı")
                 .stId(164L)
                 .acctTpId(223L)
                 .cust(cust)
@@ -72,7 +72,7 @@ public class CustomerAccountManager implements ICustomerAccountService {
     public void addCustomerAccountForCreateCustomer(Cust cust) {
         CustAcct custAcct = CustAcct.builder()
                 .acctNo(cust.getCustId().toString())
-                .acctName("Müşteri Hesabı")
+                .accountName("Müşteri Hesabı")
                 .stId(164L)
                 .acctTpId(223L)
                 .cust(cust)
@@ -106,7 +106,7 @@ public class CustomerAccountManager implements ICustomerAccountService {
         custAcct = CustAcct.builder()
                 .custAcctId(custAcct.getCustAcctId())
                 .acctNo(createCustomerAccountRequest.getAccountNo())
-                .acctName(createCustomerAccountRequest.getAccountName())
+                .accountName(createCustomerAccountRequest.getAccountName())
                 .stId(createCustomerAccountRequest.getStatusId())
                 .acctTpId(createCustomerAccountRequest.getAccountTypeId())
                 .cust(cust)
@@ -116,6 +116,21 @@ public class CustomerAccountManager implements ICustomerAccountService {
 
         this.customerAccountRepository.save(custAcct);
         return new SuccessResult("CUSTOMER.ACCOUNT.UPDATED");
+    }
+
+    @Override
+    public DataResult<List<GetAllCustomerAccountResponse>> getAllForCustomerGetAll() {
+        List<CustAcct> result = this.customerAccountRepository.findAll();
+        List<GetAllCustomerAccountResponse> response = result.stream().map(custAcct -> GetAllCustomerAccountResponse.builder()
+                .customerAccountId(custAcct.getCustAcctId())
+                .accountName(custAcct.getAccountName())
+                .statusId(custAcct.getStId())
+                .accountNo(custAcct.getAcctNo())
+                .accountTypeId(custAcct.getAcctTpId())
+                .build()
+        ).collect(Collectors.toList());
+
+        return new SuccessDataResult<>(response);
     }
 
 

@@ -13,28 +13,30 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="CUST_TP")
+@Table(name = "CUST_TP")
 @Builder
 public class CustTp extends BaseEntity {
     @Id
-    @SequenceGenerator(name = "custTpSeq", sequenceName = "CUST_TP_SEQ", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "custTpSeq")
-    @Column(name="CUST_TP_ID")
+    @SequenceGenerator(name = "custSeq",sequenceName = "CUST_TP_SEQ",allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "custSeq")
+    @Column(name = "CUST_TP_ID")
     private Long custTpId;
 
-    @Column (name="NAME")
+    @Column(name = "NAME")
     private String name;
 
-    @Column (name="DESCR")
+    @Column(name = "DESCR")
     private String descr;
 
-    @Column (name="SHRT_CODE")
+    @Column(name="PARTY_TP_ID")
+    private Long partyTpId; //nerden geldin
+
+    @Column(name="SHRT_CODE")
     private String shrtCode;
 
-    @Column (name="IS_ACTV")
-    private int isActv;
+    @Column(name="IS_ACTV")
+    private int isActv; //bir çok yerde integer olarak verilmiş ama boolean olarak verilmesi gerekli !!!
 
     @OneToMany(mappedBy = "custTp")
     private List<Cust> custs;
-
 }

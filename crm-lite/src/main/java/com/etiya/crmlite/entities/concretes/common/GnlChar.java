@@ -1,9 +1,10 @@
 package com.etiya.crmlite.entities.concretes.common;
 
 import com.etiya.crmlite.entities.abstracts.BaseEntity;
-import com.etiya.crmlite.entities.concretes.prod.ProdCharVal;
-import com.etiya.crmlite.entities.concretes.prod.ProdSpecCharUse;
+import com.etiya.crmlite.entities.concretes.product.ProdCharVal;
+import com.etiya.crmlite.entities.concretes.product.ProdSpecCharUse;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,15 +12,16 @@ import javax.persistence.*;
 import java.util.List;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
-@Table(name="GNL_CHAR")
+@Table(name = "GNL_CHAR")
+@Builder
 public class GnlChar extends BaseEntity {
     @Id
     @SequenceGenerator(name = "gnlCharSeq", sequenceName = "GNL_CHAR_SEQ", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "gnlCharSeq")
-    @Column(name="CHAR_ID")
+    @Column(name = "CHAR_ID")
     private Long charId;
 
     @Column(name="NAME")
@@ -36,11 +38,13 @@ public class GnlChar extends BaseEntity {
 
     @Column(name="IS_ACTV")
     private int isActv;
-    
-    @OneToMany(mappedBy = "gnlChar")
-    private List<ProdCharVal> prodCharVals;
 
     @OneToMany(mappedBy = "gnlChar")
-    private List<ProdSpecCharUse> prodSpecCharUses;
+    private List<ProdCharVal> prodCharValList;
+
+    @OneToMany(mappedBy = "gnlChar")
+    private List< ProdSpecCharUse> prodSpecCharUses;
+
+
 
 }

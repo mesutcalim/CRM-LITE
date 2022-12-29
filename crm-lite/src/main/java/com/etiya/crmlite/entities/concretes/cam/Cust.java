@@ -10,32 +10,35 @@ import javax.persistence.*;
 import java.util.List;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "CUST")
 @Builder
 public class Cust extends BaseEntity {
-
     @Id
+    @Column(name="CUST_ID")
     @SequenceGenerator(name = "custSeq", sequenceName = "CUST_SEQ", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "custSeq")
-    @Column(name = "CUST_ID")
     private Long custId;
-
-    @OneToOne
-    @JoinColumn(name = "PARTY_ROLE_ID", referencedColumnName = "PARTY_ROLE_ID")
-    private PartyRole partyRole;
 
     @Column(name = "ST_ID")
     private Long stId;
 
-    @ManyToOne
-    @JoinColumn (name="CUST_TP_ID")
-    private CustTp custTp;
+    @OneToOne
+    @JoinColumn(name = "PARTY_ROLE_ID")
+    private PartyRole partyRole;
 
+    @ManyToOne
+    @JoinColumn(name="CUST_TP_ID")
+    private CustTp custTp;
 
     @OneToMany(mappedBy = "cust")
     private List<CustAcct> custAccts;
+
+
+
+
+
 
 }

@@ -15,10 +15,11 @@ import javax.persistence.*;
 @Table(name = "CNTC_MEDIUM")
 @Builder
 public class CntcMedium extends BaseEntity {
+
     @Id
+    @Column(name="CNTC_MEDIUM_ID")
     @SequenceGenerator(name = "cntcMediumSeq", sequenceName = "CNTC_MEDIUM_SEQ", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "cntcMediumSeq")
-    @Column(name = "CNTC_MEDIUM_ID")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "cntcMediumSeq")
     private Long cntcMediumId;
 
     @Column(name = "ROW_ID")
@@ -27,7 +28,7 @@ public class CntcMedium extends BaseEntity {
     @Column(name = "DATA_TP_ID")
     private Long dataTpId;
 
-    @Column(name = "CNTC_DATA")
+    @Column(name="CNTC_DATA")
     private String cntcData;
 
     @Column(name = "ST_ID")

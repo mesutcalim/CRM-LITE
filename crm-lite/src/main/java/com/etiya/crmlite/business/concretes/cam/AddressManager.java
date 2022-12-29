@@ -29,7 +29,7 @@ public class AddressManager implements IAddressService {
     public Result addAddress(CreateAddressRequest createAddressRequest) {
         Addr addr = new Addr().builder()
                 .rowId(createAddressRequest.getRowId())
-                .dataTpId(createAddressRequest.getDataTypeId())
+                .dataTypeId(createAddressRequest.getDataTypeId())
                 .strtId(createAddressRequest.getStreetId())
                 .bldgId(createAddressRequest.getBuildingId())
                 .addrDesc(createAddressRequest.getAddressDescription())
@@ -80,7 +80,7 @@ public class AddressManager implements IAddressService {
         address = Addr.builder()
                 .addrId(address.getAddrId())
                 .rowId(address.getRowId())
-                .dataTpId(address.getDataTpId())
+                .dataTypeId(address.getDataTypeId())
                 .strtId(updateAddressRequest.getStreetId())
                 .bldgId(updateAddressRequest.getBuildingId())
                 .addrDesc(updateAddressRequest.getAddressDescription())

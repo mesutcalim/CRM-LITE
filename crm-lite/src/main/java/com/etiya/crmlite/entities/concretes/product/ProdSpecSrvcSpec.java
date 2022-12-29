@@ -1,44 +1,42 @@
-package com.etiya.crmlite.entities.concretes.prod;
+package com.etiya.crmlite.entities.concretes.product;
 
 import com.etiya.crmlite.entities.abstracts.BaseEntity;
 import com.etiya.crmlite.entities.concretes.common.SrvcSpec;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @Entity
-@Table(name="PROD_SPEC_SRVC_SPEC")
+@Table(name = "PROD_SPEC_SRVC_SPEC")
+@Builder
 public class ProdSpecSrvcSpec extends BaseEntity {
     @Id
+    @Column(name = "PROD_SPEC_SRVC_SPEC_ID")
     @SequenceGenerator(name = "prodSpecSrvcSpecSeq", sequenceName = "PROD_SPEC_SRVC_SPEC_SEQ", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "prodSpecSrvcSpecSeq")
-    @Column (name="PROD_SPEC_SRVC_SPEC_ID")
     private Long prodSpecSrvcSpecId;
-
-    @ManyToOne
-    @JoinColumn(name = "PROD_SPEC_ID")
-    private ProdSpec prodSpec;
-
+    @Column(name = "REL_TP_ID")
+    private Long relTpId;
+    @Column(name = "SDATE")
+    private LocalDateTime sDate;
+    @Column(name = "EDATE")
+    private LocalDateTime eDate;
+    @Column(name = "ST_ID")
+    private Long stId;
     @ManyToOne
     @JoinColumn(name = "SRVC_SPEC_ID")
     private SrvcSpec srvcSpec;
 
-    @Column(name ="REL_TP_ID")
-    private Long relTpId;
+    @ManyToOne
+    @JoinColumn(name = "PROD_SPEC_ID", insertable = false, updatable = false)
+    private ProdSpec prodSpec; // ??? PROD_SPEC_SRVC_SPEC ile nasıl bir bağlantısı var ?
 
-    @Column(name = "SDATE")
-    private LocalDate sDate;
 
-    @Column(name = "EDATE")
-    private LocalDate eDate;
-
-    @Column(name = "ST_ID")
-    private int stId;
 }

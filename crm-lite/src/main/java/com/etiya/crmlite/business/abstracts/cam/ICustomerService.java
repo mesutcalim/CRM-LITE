@@ -4,6 +4,8 @@ import com.etiya.crmlite.business.dtos.requests.cam.customers.CreateCustomerRequ
 import com.etiya.crmlite.business.dtos.requests.cam.customers.FindCustomerRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.customers.UpdateCustomerRequest;
 import com.etiya.crmlite.business.dtos.responses.cam.customers.FindCustomerResponse;
+import com.etiya.crmlite.business.dtos.responses.cam.customers.GetAllCustomerResponse;
+import com.etiya.crmlite.business.dtos.responses.cam.customers.GetByIdCustomerResponse;
 import com.etiya.crmlite.core.util.results.DataResult;
 import com.etiya.crmlite.core.util.results.Result;
 import com.etiya.crmlite.entities.concretes.cam.Cust;
@@ -62,4 +64,6 @@ public interface ICustomerService {
 
     Cust getByCustomerId(Long customerId);
     Result add(CreateCustomerRequest createCustomerRequest);
+    DataResult<List<GetAllCustomerResponse>> getAll();
+    DataResult<GetByIdCustomerResponse> getById(Long id);
 }

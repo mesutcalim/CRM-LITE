@@ -21,4 +21,6 @@ public interface ICustomerAccountService {
     Result delete(Long customerAccountId);
 
     Result update(Long customerAccountId,CreateCustomerAccountRequest createCustomerAccountRequest);
+
+    DataResult<List<GetAllCustomerAccountResponse>> getAllForCustomerGetAll();
 }

@@ -2,45 +2,39 @@ package com.etiya.crmlite.entities.concretes.order;
 
 import com.etiya.crmlite.entities.abstracts.BaseEntity;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @Entity
-@Table(name = "BSN_INTER_TP")
+@Table(name="BSN_INTER_TP")
+@Builder
 public class BsnInterTp extends BaseEntity {
     @Id
+    @Column(name="BSN_INTER_TP_ID")
     @SequenceGenerator(name = "bsnInterTpSeq", sequenceName = "BSN_INTER_TP_SEQ", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "bsnInterTpSeq")
-    @Column(name = "BSN_INTER_TP_ID")
-    private Long bsnInterTpId;
-
-    @OneToMany(mappedBy = "prntBsnInterTp")
-    private List<BsnInterTp> childBsnInterTps;
-
-    @ManyToOne
-    @JoinColumn(name = "PRNT_BSN_INTER_TP_ID")
-    private BsnInterTp prntBsnInterTp;
-
-    @Column(name = "NAME")
+    private int bsnInterTypeId;
+    @Column(name = "PRNT_BSN_INTER_TP_ID")
+    private Long prntBsnInterTpId;
+    @Column(name="NAME")
     private String name;
 
-    @Column(name = "DESCR")
+    @Column(name="DESCR")
     private String descr;
 
-    @Column(name = "SHRT_CODE")
+    @Column(name="SHRT_CODE")
     private String shrtCode;
 
-    @Column(name = "IS_ACTV")
+    @Column(name="IS_ACTV")
     private int isActv;
 
     @OneToMany(mappedBy = "bsnInterTp")
     private List<BsnInterSpec> bsnInterSpecs;
-
-
 }

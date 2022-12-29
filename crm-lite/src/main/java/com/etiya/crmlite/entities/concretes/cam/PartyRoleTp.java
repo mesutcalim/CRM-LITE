@@ -17,9 +17,9 @@ import java.util.List;
 @Builder
 public class PartyRoleTp extends BaseEntity {
     @Id
+    @Column(name = "PARTY_ROLE_TP_ID")
     @SequenceGenerator(name = "partyRoleTpSeq", sequenceName = "PARTY_ROLE_TP_SEQ", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "partyRoleTpSeq")
-    @Column(name = "PARTY_ROLE_TP_ID")
     private Long partyRoleTpId;
 
     @Column(name = "NAME")
@@ -33,6 +33,7 @@ public class PartyRoleTp extends BaseEntity {
 
     @Column(name = "IS_ACTV")
     private int isActv;
+
 
     @OneToMany(mappedBy = "partyRoleTp")
     private List<PartyRole> partyRoles;

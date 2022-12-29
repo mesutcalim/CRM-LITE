@@ -1,16 +1,22 @@
 package com.etiya.crmlite.business.concretes.cam;
 
+import com.etiya.crmlite.business.abstracts.cam.ICustomerAccountService;
 import com.etiya.crmlite.business.abstracts.cam.ICustomerTypeService;
 import com.etiya.crmlite.business.abstracts.cam.IPartyRoleService;
 import com.etiya.crmlite.business.dtos.requests.cam.customers.CreateCustomerRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.customers.UpdateCustomerRequest;
+import com.etiya.crmlite.business.dtos.responses.cam.customerAccounts.GetAllCustomerAccountResponse;
 import com.etiya.crmlite.business.dtos.responses.cam.customers.FindCustomerResponse;
 
+import com.etiya.crmlite.business.dtos.responses.cam.customers.GetAllCustomerResponse;
+import com.etiya.crmlite.business.dtos.responses.cam.customers.GetByIdCustomerResponse;
+import com.etiya.crmlite.core.util.exceptions.BusinessException;
 import com.etiya.crmlite.core.util.generalCodes.GeneralStatusCodes;
 import com.etiya.crmlite.core.util.mapper.ModelMapperService;
 import com.etiya.crmlite.core.util.results.*;
 import com.etiya.crmlite.entities.concretes.cam.Cust;
 import com.etiya.crmlite.business.abstracts.cam.ICustomerService;
+import com.etiya.crmlite.entities.concretes.cam.CustAcct;
 import com.etiya.crmlite.entities.concretes.cam.CustTp;
 import com.etiya.crmlite.entities.concretes.cam.PartyRole;
 import com.etiya.crmlite.repositories.cam.ICustomerRepository;
@@ -28,6 +34,7 @@ public class CustomerManager implements ICustomerService {
     private ModelMapperService modelMapperService;
     private ICustomerTypeService customerTypeService;
     private IPartyRoleService partyRoleService;
+    private ICustomerAccountService customerAccountService;
 
     @Override
     public Result add(CreateCustomerRequest createCustomerRequest) {
@@ -38,8 +45,12 @@ public class CustomerManager implements ICustomerService {
                 .partyRole(partyRole)
                 .stId(GeneralStatusCodes.CUST_ACTV)
                 .build();
+        if(checkNatId(cust)){
         this.customerRepository.save(cust);
-        return new SuccessResult("CUSTOMER.ADDED");
+        return new SuccessResult("CUSTOMER.ADDED");}
+        else{
+            throw new BusinessException("A customer is already exist with this NatID");
+        }
     }
     //todo:Buraya Eğer benzer bir kayıt bulunduysa kullanıcıya “A customer is already exist with this NatID”
     // uyarı mesajı gösteren fonksiyon yazılmalıdır.
@@ -89,15 +100,36 @@ public class CustomerManager implements ICustomerService {
     public Result deleteCust(Long cust_id) {
         Cust customer = customerRepository.findById(cust_id).orElseThrow();
 
-        if(canBeDeleted(customer)) {
+//        if(canBeDeleted(customer)) {
             customer.setStId(GeneralStatusCodes.CUST_PASS);
             customerRepository.save(customer);
             customer.setCDate(this.customerRepository.getReferenceById(cust_id).getCDate());
             return new SuccessResult("Müşteri başarı ile silindi.");
-        }
-        else{
-            return new ErrorResult("Since the customer has active products, the customer cannot be deleted.");
-        }
+//        } else{
+//            return new ErrorResult("Since the customer has active products, the customer cannot be deleted.");
+//        }
+
+    }
+    @Override
+    public DataResult<List<GetAllCustomerResponse>> getAll() {
+        List<Cust> result = this.customerRepository.findAll();
+        List<GetAllCustomerResponse> response = result.stream().map(cust-> GetAllCustomerResponse.builder()
+                .customerId(cust.getCustId())
+                .statusId(cust.getStId())
+                .partyRoleId(cust.getPartyRole().getPartyRoleId())
+                .build()
+        ).collect(Collectors.toList());
+        return new SuccessDataResult<>(response);
+    }
+    @Override
+    public DataResult<GetByIdCustomerResponse> getById(Long id) {
+        Cust result= this.customerRepository.findById(id).get();
+        GetByIdCustomerResponse response = GetByIdCustomerResponse.builder()
+                .customerId(result.getCustId())
+                .statusId(result.getStId())
+                .partyRoleId(result.getPartyRole().getPartyRoleId())
+                .build();
+        return new SuccessDataResult<>(response);
     }
 
 
@@ -113,15 +145,24 @@ public class CustomerManager implements ICustomerService {
         return cust;
     }
 
-    private boolean canBeDeleted(Cust cust){
-
-        if( customerRepository.checkActiveProduct(cust.getCustId()).isEmpty())
-        {
-            return true;//silinebilir
-        }else {
+    private boolean checkNatId(Cust cust){
+        Cust custExist = null;
+        custExist = customerRepository.findById(cust.getCustId()).orElseThrow();
+        if(custExist == null)
+            return true;
+        else
             return false;
-        }
     }
+
+//    private boolean canBeDeleted(Cust cust){
+//
+//        if( customerRepository.checkActiveProduct(cust.getCustId()).isEmpty())
+//        {
+//            return true;//silinebilir
+//        }else {
+//            return false;
+//        }
+//    }
 }
 
 
