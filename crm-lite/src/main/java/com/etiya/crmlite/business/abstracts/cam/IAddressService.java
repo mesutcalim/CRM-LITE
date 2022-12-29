@@ -1,11 +1,16 @@
 package com.etiya.crmlite.business.abstracts.cam;
 
+import com.etiya.crmlite.business.dtos.requests.cam.addresses.CreateAddressRequest;
+import com.etiya.crmlite.business.dtos.requests.cam.addresses.UpdateAddressRequest;
+import com.etiya.crmlite.business.dtos.requests.cam.individuals.CreateIndividualCustomerRequest;
+import com.etiya.crmlite.core.util.results.Result;
 import com.etiya.crmlite.entities.concretes.cam.Addr;
+import com.etiya.crmlite.entities.concretes.cam.Cust;
 
 import java.util.List;
 
 public interface IAddressService {
-    void addAddress(Addr addr);
+    Result addAddress(CreateAddressRequest createAddressRequest);
     //todo: bu fonksiyon içine addres request almalı ve void yerine bir data result dönmelidir.
     // Bu request yapısı :
     // Address Title
@@ -16,12 +21,13 @@ public interface IAddressService {
     // Addres Title yazılmadıysa sistem tarafından “Address 1, Address 2, Address N” şeklinde sıralı
     // bir isimlendirme ataması yapılmalıdır.
 
+    public void addAddressForCreateCustomer(CreateIndividualCustomerRequest createIndividualCustomerRequest, Cust cust);
 
-    void deleteAddress(int address_id);
-    Addr updateAddress(int address_id);
+    Result deleteAddress(Long address_id);
 
     //todo:Kullanıcı, kaydedilen adresi, adres alanı içerisinde bulunan üç nokta içerisinden “Main” butonuna basarak
     // main adresi olarak seçebilmelidir. Bu seçenek hali hazırda Main adres için pasif olmalıdır.
 
+    Result updateAddress(Long address_id, UpdateAddressRequest updateAddressRequest);
     
 }
