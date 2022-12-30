@@ -4,7 +4,10 @@ import com.etiya.crmlite.business.abstracts.cam.ICustomerService;
 import com.etiya.crmlite.business.dtos.requests.cam.customers.CreateCustomerRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.customers.FindCustomerRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.customers.UpdateCustomerRequest;
+import com.etiya.crmlite.business.dtos.responses.cam.addresses.GetAllAddressResponse;
 import com.etiya.crmlite.business.dtos.responses.cam.customers.FindCustomerResponse;
+import com.etiya.crmlite.business.dtos.responses.cam.customers.GetAllCustomerResponse;
+import com.etiya.crmlite.business.dtos.responses.cam.customers.GetByIdCustomerResponse;
 import com.etiya.crmlite.core.util.results.DataResult;
 import com.etiya.crmlite.core.util.results.Result;
 import lombok.AllArgsConstructor;
@@ -25,6 +28,17 @@ public class CustomerController {
 //    public ResponseEntity<Result> addCustomer(@RequestBody CreateCustomerRequest createCustomerRequest){
 //        return new ResponseEntity<>(customerService.addCustomer(createCustomerRequest), HttpStatus.CREATED);
 //    }
+
+    @GetMapping("/getbyid")
+    public DataResult<GetByIdCustomerResponse> getById(@RequestParam Long id){
+        return this.customerService.getById(id);
+    }
+
+    @GetMapping("/getall")
+    public DataResult<List<GetAllCustomerResponse>> getAll () {
+        return this.customerService.getAll();
+    }
+
     @PostMapping("/add")
     public Result add(@RequestBody CreateCustomerRequest createCustomerRequest) {
         return this.customerService.add(createCustomerRequest);

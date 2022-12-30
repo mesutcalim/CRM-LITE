@@ -34,7 +34,7 @@ public class CustomerManager implements ICustomerService {
     private ModelMapperService modelMapperService;
     private ICustomerTypeService customerTypeService;
     private IPartyRoleService partyRoleService;
-    private ICustomerAccountService customerAccountService;
+//    private ICustomerAccountService customerAccountService;
 
     @Override
     public Result add(CreateCustomerRequest createCustomerRequest) {
@@ -153,6 +153,14 @@ public class CustomerManager implements ICustomerService {
         else
             return false;
     }
+    //Üstteki fonskiyonun alternatifi
+    //    private void customerCanNotExistWithSameNatId(Long natId){
+//        boolean isExists = customerRepository.existsCustByNatId(natId);
+//        if(isExists){
+//            throw new BusinessException("“A customer is already exist with this NatID");
+//
+//        }
+//    }
 
 //    private boolean canBeDeleted(Cust cust){
 //
@@ -163,6 +171,8 @@ public class CustomerManager implements ICustomerService {
 //            return false;
 //        }
 //    }
+
+
 }
 
 

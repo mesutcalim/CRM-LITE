@@ -42,6 +42,8 @@ public interface ICustomerRepository extends JpaRepository<Cust, Long> {
     );
 
 
+
+
 //    @Query(value = "SELECT * FROM CUST_ACCT ca " +
 //            "JOIN CUST  c ON ca.CUST_ID = c.CUST_ID " +
 //            "JOIN CUST_ACCT_PROD_INVL capi ON capi.CUST_ACCT_ID = ca.CUST_ACCT_ID " +

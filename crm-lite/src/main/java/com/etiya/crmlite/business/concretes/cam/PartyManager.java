@@ -29,5 +29,10 @@ public class PartyManager implements IPartyService {
                 .build();
         return new SuccessDataResult<>(response);
     }
+    @Override
+    public Party getByPartyId(Long id) {
+        Party party = this.partyRepository.findById(id).get();
+        return party;
+    }
 }
 

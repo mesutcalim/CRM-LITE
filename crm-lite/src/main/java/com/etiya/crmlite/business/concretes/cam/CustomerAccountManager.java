@@ -66,7 +66,36 @@ public class CustomerAccountManager implements ICustomerAccountService {
         this.customerAccountRepository.save(custAcct);
         return new SuccessResult("CUSTOMER.DEFAULT.ACCOUNT.ADDED");
     }
+    @Override
+    public Result delete(Long customerAccountId) {
+        CustAcct custAcct= this.customerAccountRepository.findById(customerAccountId).get();
+        custAcct = CustAcct.builder()
+                .stId(170L)
+                .build();
+        custAcct.setCDate(this.customerAccountRepository.getReferenceById(custAcct.getCustAcctId()).getCDate());
 
+        this.customerAccountRepository.save(custAcct);
+        return new SuccessResult("CUSTOMER.ACCOUNT.DELETED");
+    }
+
+    @Override
+    public Result update(Long customerAccountId,UpdateCustomerAccountRequest updateCustomerAccountRequest) {
+        CustAcct custAcct = customerAccountRepository.findById(customerAccountId).orElseThrow();
+        Cust cust= custAcct.getCust();
+        custAcct = CustAcct.builder()
+                .custAcctId(custAcct.getCustAcctId())
+                .acctNo(updateCustomerAccountRequest.getAccountNo())
+                .accountName(updateCustomerAccountRequest.getAccountName())
+                .stId(updateCustomerAccountRequest.getStatusId())
+                .acctTpId(updateCustomerAccountRequest.getAccountTypeId())
+                .cust(cust)
+                .build();
+
+        custAcct.setCDate(this.customerAccountRepository.getReferenceById(updateCustomerAccountRequest.getCustomerAccountId()).getCDate());
+
+        this.customerAccountRepository.save(custAcct);
+        return new SuccessResult("CUSTOMER.ACCOUNT.UPDATED");
+    }
 
     @Override
     public void addCustomerAccountForCreateCustomer(Cust cust) {
@@ -87,36 +116,7 @@ public class CustomerAccountManager implements ICustomerAccountService {
 
     }
 
-    @Override
-    public Result delete(Long customerAccountId) {
-        CustAcct custAcct= this.customerAccountRepository.findById(customerAccountId).get();
-        custAcct = CustAcct.builder()
-                .stId(170L)
-                .build();
-        custAcct.setCDate(this.customerAccountRepository.getReferenceById(custAcct.getCustAcctId()).getCDate());
 
-        this.customerAccountRepository.save(custAcct);
-        return new SuccessResult("CUSTOMER.ACCOUNT.DELETED");
-    }
-
-    @Override
-    public Result update(Long customerAccountId,CreateCustomerAccountRequest createCustomerAccountRequest) {
-        CustAcct custAcct = customerAccountRepository.findById(customerAccountId).orElseThrow();
-        Cust cust= custAcct.getCust();
-        custAcct = CustAcct.builder()
-                .custAcctId(custAcct.getCustAcctId())
-                .acctNo(createCustomerAccountRequest.getAccountNo())
-                .accountName(createCustomerAccountRequest.getAccountName())
-                .stId(createCustomerAccountRequest.getStatusId())
-                .acctTpId(createCustomerAccountRequest.getAccountTypeId())
-                .cust(cust)
-                .build();
-
-        custAcct.setCDate(this.customerAccountRepository.getReferenceById(createCustomerAccountRequest.getCustomerAccountId()).getCDate());
-
-        this.customerAccountRepository.save(custAcct);
-        return new SuccessResult("CUSTOMER.ACCOUNT.UPDATED");
-    }
 
     @Override
     public DataResult<List<GetAllCustomerAccountResponse>> getAllForCustomerGetAll() {
@@ -133,9 +133,9 @@ public class CustomerAccountManager implements ICustomerAccountService {
         return new SuccessDataResult<>(response);
     }
 
-
-
-
-
-
+    @Override
+    public CustAcct getByCustomerAccountId(Long id) {
+        CustAcct custAcct= this.customerAccountRepository.findById(id).get();
+        return custAcct;
+    }
 }

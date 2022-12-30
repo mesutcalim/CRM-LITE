@@ -28,4 +28,10 @@ public class ProductManager implements IProductService {
 
                     return new SuccessDataResult<>(response);
         }
+
+    @Override
+    public Prod getByProductId(Long id) {
+        Prod prod= this.productRepository.findById(id).get();
+        return prod;
+    }
 }

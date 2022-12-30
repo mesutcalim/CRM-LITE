@@ -8,4 +8,5 @@ public interface IPartyService {
     void addPartyFromIndividual(Party party);
 
     DataResult<GetByIdPartyResponse> getById(Long id);
+    Party getByPartyId(Long id);
 }

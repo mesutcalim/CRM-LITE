@@ -6,6 +6,8 @@ import com.etiya.crmlite.business.dtos.requests.cam.addresses.UpdateAddressReque
 import com.etiya.crmlite.business.dtos.requests.cam.customers.CreateCustomerRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.individuals.CreateAddressForIndividualRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.individuals.CreateIndividualCustomerRequest;
+import com.etiya.crmlite.business.dtos.responses.cam.addresses.GetAllAddressResponse;
+import com.etiya.crmlite.business.dtos.responses.cam.addresses.GetByIdAddressResponse;
 import com.etiya.crmlite.core.util.mapper.ModelMapperService;
 import com.etiya.crmlite.core.util.results.DataResult;
 import com.etiya.crmlite.core.util.results.Result;
@@ -19,12 +21,46 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
 public class AddressManager implements IAddressService {
     private IAddressRepository addressRepository;
     private ModelMapperService modelMapperService;
+
+
+
+    @Override
+    public DataResult<List<GetAllAddressResponse>> getAll() {
+        List<Addr> result = this.addressRepository.findAll();
+        List<GetAllAddressResponse> response = result.stream().map(addr -> GetAllAddressResponse.builder()
+                .addressId(addr.getAddrId())
+                .addressDescription(addr.getAddrDesc())
+                .buildingId(addr.getBldgId())
+                .cityName(addr.getCityName())
+                .countryName(addr.getCntryName())
+                .streetId(addr.getStrtId())
+                .streetName(addr.getStrtName())
+                .build()
+        ).collect(Collectors.toList());
+        return new SuccessDataResult<>(response);
+    }
+
+    @Override
+    public DataResult<GetByIdAddressResponse> getById(Long id) {
+        Addr result= this.addressRepository.findById(id).orElseThrow();
+        GetByIdAddressResponse response = GetByIdAddressResponse.builder()
+                .addressId(result.getAddrId())
+                .addressDescription(result.getAddrDesc())
+                .buildingId(result.getBldgId())
+                .cityName(result.getCityName())
+                .countryName(result.getCntryName())
+                .streetId(result.getStrtId())
+                .streetName(result.getStrtName())
+                .build();
+        return new SuccessDataResult<>(response);
+    }
     @Override
     public Result addAddress(CreateAddressRequest createAddressRequest) {
         Addr addr = new Addr().builder()

@@ -5,83 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="679de0f5-e86a-420d-aa0a-09cfc2a737d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/product/ProdCatalProdOfr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/dtos/requests/cam/customerAccounts/UpdateCustomerAccountRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/api/controllers/cam/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/api/controllers/cam/AddressController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/api/controllers/cam/ContactMediumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/api/controllers/cam/ContactMediumController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/api/controllers/cam/CustomerAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/api/controllers/cam/CustomerAccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/IAddressService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/IAddressService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/IContactMediumService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/IContactMediumService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/ICustomerAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/ICustomerAccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/ICustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/IIndividualService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/IIndividualService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/IPartyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/IPartyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/AddressManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/AddressManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/ContactMediumManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/ContactMediumManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/CustomerAccountManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/CustomerAccountManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/CustomerAccountProductInvolvementManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/CustomerAccountProductInvolvementManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/CustomerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/CustomerManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/abstracts/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/abstracts/BaseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/Addr.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/Addr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/CntcMedium.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/CntcMedium.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/Cust.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/Cust.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/CustAcct.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/CustAcct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/CustAcctProdInvl.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/CustAcctProdInvl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/CustTp.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/CustTp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/PartyRoleTp.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/PartyRoleTp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/common/EtiyaTypeValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/common/EtiyaTypeValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/common/GnlChar.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/common/GnlChar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/common/GnlCharVal.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/common/GnlCharVal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/common/GnlSt.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/common/GnlSt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/common/GnlTp.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/common/GnlTp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/common/RsrcSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/common/RsrcSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/common/SrvcSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/common/SrvcSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/order/BsnInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/order/BsnInter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/order/BsnInterItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/order/BsnInterItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/order/BsnInterSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/order/BsnInterSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/order/BsnInterSt.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/order/BsnInterSt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/order/BsnInterTp.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/order/BsnInterTp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/order/CustOrd.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/order/CustOrd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/order/CustOrdCharVal.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/order/CustOrdCharVal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/order/CustOrdItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/order/CustOrdItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/prod/Cmpg.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/product/Cmpg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/prod/CmpgProdOfr.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/product/CmpgProdOfr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/prod/Prod.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/product/Prod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/prod/ProdCatal.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/product/ProdCatal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/prod/ProdCatalProdOfr.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/prod/ProdCharVal.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/product/ProdCharVal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/prod/ProdOfr.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/product/ProdOfr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/prod/ProdRel.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/product/ProdRel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/prod/ProdSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/product/ProdSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/prod/ProdSpecCharUse.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/product/ProdSpecCharUse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/prod/ProdSpecRsrcSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/product/ProdSpecRsrcSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/prod/ProdSpecSrvcSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/product/ProdSpecSrvcSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/IndividualManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/IndividualManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/PartyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/PartyManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/cam/ICustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/cam/ICustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/common/IEtiyaTypeValueRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/common/IEtiyaTypeValueRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/ICampaignProductOfferingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/ICampaignProductOfferingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/ICampaignRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/ICampaignRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/IProductCatalogProductOfferingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/IProductCatalogProductOfferingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/IProductCatalogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/IProductCatalogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/IProductCharacteristicValueRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/IProductCharacteristicValueRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/IProductOfferingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/IProductOfferingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/IProductRelationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/IProductRelationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/IProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/IProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/IProductSpecificationCharacteristicUseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/IProductSpecificationCharacteristicUseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/IProductSpecificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/IProductSpecificationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/IProductSpecificationResourceSpecificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/IProductSpecificationResourceSpecificationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/IProductSpecificationServiceSpecificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/prod/IProductSpecificationServiceSpecificationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/cam/IIndividualRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/cam/IIndividualRepository.java" afterDir="false" />
     </list>
     <list id="ba1a305a-5945-4af6-a0fc-c010e69de2db" name="Changes by gorkem.acir" comment="" />
     <list id="4332af4c-7fed-48d2-aa4e-9671cf7f15ae" name="Changes by hakan.cetin" comment="" />
     <list id="f08d7b2c-0074-4c9d-92c2-28bb2251bd52" name="Changes by kubra.sahin" comment="" />
     <list id="40c99bb7-2b3a-48a2-b352-4f1b6c00a985" name="Changes by mert.soyunmezoglu" comment="" />
     <list id="7ace94ae-922c-4992-904b-8879f8e91841" name="Changes by sametcan.sertman" comment="">
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/IPartyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/IPartyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/order/ICustomerOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/order/ICustomerOrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/prod/IProductOfferingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/prod/IProductOfferingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/prod/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/prod/IProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/AddressManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/AddressManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/CustomerAccountManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/CustomerAccountManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/PartyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/PartyManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/order/CustomerOrderManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/order/CustomerOrderManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductOfferingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/prod/ProductOfferingManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/Ind.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/Ind.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/Party.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/PartyRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/entities/concretes/cam/PartyRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/api/controllers/cam/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/api/controllers/cam/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/IIndividualService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/IIndividualService.java" afterDir="false" />
     </list>
-    <list id="38120318-0c6b-4625-9ec2-fcfa68d29341" name="Changes by veysel.kurnaz" comment="" />
+    <list id="27c5fa9e-7f35-459c-8b4e-000dd8c1eeb4" name="Changes by veysel.kurnaz" comment="">
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/api/controllers/cam/CustomerAccountProductInvolvementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/api/controllers/cam/CustomerAccountProductInvolvementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/ICustomerAccountProductInvolvementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/ICustomerAccountProductInvolvementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/ICustomerAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/ICustomerAccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/prod/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/prod/IProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/CustomerAccountProductInvolvementManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/CustomerAccountProductInvolvementManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/cam/ICustomerAccountProductInvolvementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/repositories/cam/ICustomerAccountProductInvolvementRepository.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,20 +64,26 @@
     <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/CustomerAccountManager.java">
+    <file path="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/CustomerAccountProductInvolvementManager.java">
       <ranges>
-        <range start1="33" end1="34" start2="33" end2="34" changelist="679de0f5-e86a-420d-aa0a-09cfc2a737d8" />
-        <range start1="48" end1="49" start2="48" end2="49" changelist="679de0f5-e86a-420d-aa0a-09cfc2a737d8" />
-        <range start1="60" end1="61" start2="60" end2="61" changelist="679de0f5-e86a-420d-aa0a-09cfc2a737d8" />
-        <range start1="74" end1="75" start2="74" end2="75" changelist="679de0f5-e86a-420d-aa0a-09cfc2a737d8" />
-        <range start1="108" end1="109" start2="108" end2="109" changelist="7ace94ae-922c-4992-904b-8879f8e91841" />
-        <range start1="119" end1="119" start2="119" end2="134" changelist="679de0f5-e86a-420d-aa0a-09cfc2a737d8" />
+        <range start1="3" end1="3" start2="3" end2="19" changelist="27c5fa9e-7f35-459c-8b4e-000dd8c1eeb4" />
+        <range start1="6" end1="6" start2="22" end2="25" changelist="679de0f5-e86a-420d-aa0a-09cfc2a737d8" />
+        <range start1="11" end1="11" start2="30" end2="156" changelist="27c5fa9e-7f35-459c-8b4e-000dd8c1eeb4" />
       </ranges>
     </file>
-    <file path="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/AddressManager.java">
+    <file path="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/ICustomerAccountService.java">
       <ranges>
-        <range start1="31" end1="32" start2="31" end2="32" changelist="679de0f5-e86a-420d-aa0a-09cfc2a737d8" />
-        <range start1="82" end1="83" start2="82" end2="83" changelist="7ace94ae-922c-4992-904b-8879f8e91841" />
+        <range start1="3" end1="3" start2="3" end2="4" changelist="679de0f5-e86a-420d-aa0a-09cfc2a737d8" />
+        <range start1="8" end1="8" start2="9" end2="10" changelist="27c5fa9e-7f35-459c-8b4e-000dd8c1eeb4" />
+        <range start1="22" end1="23" start2="24" end2="25" changelist="679de0f5-e86a-420d-aa0a-09cfc2a737d8" />
+        <range start1="25" end1="25" start2="27" end2="29" changelist="27c5fa9e-7f35-459c-8b4e-000dd8c1eeb4" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/abstracts/cam/IIndividualService.java">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="9" changelist="679de0f5-e86a-420d-aa0a-09cfc2a737d8" />
+        <range start1="4" end1="4" start2="10" end2="15" changelist="679de0f5-e86a-420d-aa0a-09cfc2a737d8" />
+        <range start1="8" end1="8" start2="19" end2="30" changelist="7ace94ae-922c-4992-904b-8879f8e91841" />
       </ranges>
     </file>
   </component>
@@ -154,7 +120,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "corretto-17",
-    "last_opened_file_path": "C:/Users/mesut.calim/Desktop/ETIYA-Akademi-master (1)",
+    "last_opened_file_path": "C:/Users/mesut.calim/Downloads/crm4",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "spring.configuration.checksum": "66c6f0e4fc7a6211ebd7ed0efccce63a"
@@ -195,7 +161,8 @@
       <workItem from="1672295899331" duration="105000" />
       <workItem from="1672296025275" duration="67000" />
       <workItem from="1672296119692" duration="18467000" />
-      <workItem from="1672334197004" duration="7389000" />
+      <workItem from="1672334197004" duration="7482000" />
+      <workItem from="1672385858551" duration="10685000" />
     </task>
     <servers />
   </component>
@@ -221,7 +188,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/crm-lite/src/main/java/com/etiya/crmlite/business/concretes/cam/CustomerManager.java</url>
-          <line>161</line>
+          <line>169</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
