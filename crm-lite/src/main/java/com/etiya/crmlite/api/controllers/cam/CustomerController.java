@@ -10,10 +10,16 @@ import com.etiya.crmlite.business.dtos.responses.cam.customers.GetAllCustomerRes
 import com.etiya.crmlite.business.dtos.responses.cam.customers.GetByIdCustomerResponse;
 import com.etiya.crmlite.core.util.results.DataResult;
 import com.etiya.crmlite.core.util.results.Result;
+import com.etiya.crmlite.entities.concretes.cam.Cust;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Slice;
+
 
 import java.util.List;
 
@@ -53,6 +59,7 @@ public class CustomerController {
     public Result deleteCustomer(@RequestParam Long customerId){
         return customerService.deleteCust(customerId);
     }
+
 
     @GetMapping("/getCustomerByFilter")
     public DataResult<List<FindCustomerResponse>> getCustomerByFilter(

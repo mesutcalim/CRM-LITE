@@ -21,6 +21,8 @@ import com.etiya.crmlite.entities.concretes.cam.CustTp;
 import com.etiya.crmlite.entities.concretes.cam.PartyRole;
 import com.etiya.crmlite.repositories.cam.ICustomerRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -121,6 +123,7 @@ public class CustomerManager implements ICustomerService {
         ).collect(Collectors.toList());
         return new SuccessDataResult<>(response);
     }
+
     @Override
     public DataResult<GetByIdCustomerResponse> getById(Long id) {
         Cust result= this.customerRepository.findById(id).get();
@@ -144,6 +147,13 @@ public class CustomerManager implements ICustomerService {
         Cust cust= this.customerRepository.findById(id).get();
         return cust;
     }
+
+//    @Override
+//    public DataResult<Page<Cust>> findAll(Pageable pageable) {
+//        return new SuccessDataResult<>("Başarıyla sayfalandı.",customerRepository.findAll(pageable));
+//    //return new SuccessDataResult<>(customerRepository.findAll(pageable), messageSource.getMessage(Message.Address.getAllPageable,null,
+//        //                LocaleContextHolder.getLocale()));
+//    }
 
     private boolean checkNatId(Cust cust){
         Cust custExist = null;

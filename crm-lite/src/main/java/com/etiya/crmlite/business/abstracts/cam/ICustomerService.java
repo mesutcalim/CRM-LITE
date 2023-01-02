@@ -9,6 +9,9 @@ import com.etiya.crmlite.business.dtos.responses.cam.customers.GetByIdCustomerRe
 import com.etiya.crmlite.core.util.results.DataResult;
 import com.etiya.crmlite.core.util.results.Result;
 import com.etiya.crmlite.entities.concretes.cam.Cust;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Slice;
 
 import java.util.List;
 
@@ -23,6 +26,7 @@ public interface ICustomerService {
                          Long customerOrderId,
                          String accountNumber);
 
+    //DataResult<Page<Cust>> findAll(Pageable pageable);
 //    todo:Bu foksiyonların getirmesi gereken response şunları içermelidir:
 //     Customer ID
 //     First Name

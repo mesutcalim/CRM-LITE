@@ -1,13 +1,19 @@
 package com.etiya.crmlite.business.concretes.cam;
 
 import com.etiya.crmlite.business.abstracts.cam.IAddressService;
+import com.etiya.crmlite.business.abstracts.cam.ICustomerService;
 import com.etiya.crmlite.business.dtos.requests.cam.addresses.CreateAddressRequest;
+import com.etiya.crmlite.business.dtos.requests.cam.addresses.CustomerAddressRequest;
+import com.etiya.crmlite.business.dtos.requests.cam.addresses.CustomerUpdateAddressRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.addresses.UpdateAddressRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.customers.CreateCustomerRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.individuals.CreateAddressForIndividualRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.individuals.CreateIndividualCustomerRequest;
 import com.etiya.crmlite.business.dtos.responses.cam.addresses.GetAllAddressResponse;
+import com.etiya.crmlite.business.dtos.responses.cam.addresses.GetAllCustomerAddressesResponse;
+import com.etiya.crmlite.business.dtos.responses.cam.addresses.GetByCustomerUpdateAddressResponse;
 import com.etiya.crmlite.business.dtos.responses.cam.addresses.GetByIdAddressResponse;
+import com.etiya.crmlite.core.util.exceptions.BusinessException;
 import com.etiya.crmlite.core.util.mapper.ModelMapperService;
 import com.etiya.crmlite.core.util.results.DataResult;
 import com.etiya.crmlite.core.util.results.Result;
@@ -18,6 +24,8 @@ import com.etiya.crmlite.entities.concretes.cam.Cust;
 import com.etiya.crmlite.entities.concretes.cam.Party;
 import com.etiya.crmlite.repositories.cam.IAddressRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -28,7 +36,7 @@ import java.util.stream.Collectors;
 public class AddressManager implements IAddressService {
     private IAddressRepository addressRepository;
     private ModelMapperService modelMapperService;
-
+private ICustomerService customerService;
 
 
     @Override
@@ -46,6 +54,12 @@ public class AddressManager implements IAddressService {
         ).collect(Collectors.toList());
         return new SuccessDataResult<>(response);
     }
+
+    @Override
+    public Page<GetAllAddressResponse> getAllWithPage(Pageable pageable) {
+        return   addressRepository.getAllWithPage(pageable);
+    }
+
 
     @Override
     public DataResult<GetByIdAddressResponse> getById(Long id) {
@@ -159,5 +173,53 @@ public class AddressManager implements IAddressService {
 
     }
 
+    @Override
+    public DataResult<GetByCustomerUpdateAddressResponse> customerUpdateAddress(CustomerUpdateAddressRequest customerUpdateAddressRequest,Pageable pageable) {
+        Cust cust = customerService.getByCustomerId(customerUpdateAddressRequest.getCustomerId());
+        Party party = cust.getPartyRole().getParty();
+        Addr result = getByAdressId(customerUpdateAddressRequest.getAddressId());
 
+
+        Addr addr =Addr.builder()
+                .addrId(result.getAddrId())
+                .rowId(party.getPartyId())
+                .isActv(result.getIsActv())
+                .dataTypeId(result.getDataTypeId())
+                .addrDesc(customerUpdateAddressRequest.getAddressDescription())
+                .cityName(customerUpdateAddressRequest.getCityName())
+                .strtName(customerUpdateAddressRequest.getStreetName())
+                .bldgName(customerUpdateAddressRequest.getBuildingName())
+                .cntryName(customerUpdateAddressRequest.getBuildingName())
+                .strtId(customerUpdateAddressRequest.getStreetId())
+                .bldgId(customerUpdateAddressRequest.getBuildingId())
+                .build();
+
+        addr.setCUser(result.getCUser());
+        addr.setCDate(result.getCDate());
+
+        add(addr);
+
+        GetByCustomerUpdateAddressResponse response  = GetByCustomerUpdateAddressResponse.builder()
+                .addressId(result.getAddrId())
+                .customerId(cust.getCustId())
+                .build();
+
+
+        return new SuccessDataResult<>("Success.Update.Customer.Address",response);
+    }
+
+    private void add(Addr addr) {
+        addressRepository.save(addr);
+    }
+
+    private Addr getByAdressId(Long addressId) {
+        return addressRepository.findById(addressId).orElseThrow(()-> {
+            throw new BusinessException("NOT.EXİST");
+        });
+    }
+
+    @Override
+    public DataResult<List<GetAllCustomerAddressesResponse>> getAllCustomerAddresses(CustomerAddressRequest customerAddressRequest) {
+        return null;
+    }
 }

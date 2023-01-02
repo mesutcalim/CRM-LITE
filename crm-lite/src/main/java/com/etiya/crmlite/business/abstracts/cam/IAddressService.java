@@ -1,14 +1,20 @@
 package com.etiya.crmlite.business.abstracts.cam;
 
 import com.etiya.crmlite.business.dtos.requests.cam.addresses.CreateAddressRequest;
+import com.etiya.crmlite.business.dtos.requests.cam.addresses.CustomerAddressRequest;
+import com.etiya.crmlite.business.dtos.requests.cam.addresses.CustomerUpdateAddressRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.addresses.UpdateAddressRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.individuals.CreateIndividualCustomerRequest;
 import com.etiya.crmlite.business.dtos.responses.cam.addresses.GetAllAddressResponse;
+import com.etiya.crmlite.business.dtos.responses.cam.addresses.GetAllCustomerAddressesResponse;
+import com.etiya.crmlite.business.dtos.responses.cam.addresses.GetByCustomerUpdateAddressResponse;
 import com.etiya.crmlite.business.dtos.responses.cam.addresses.GetByIdAddressResponse;
 import com.etiya.crmlite.core.util.results.DataResult;
 import com.etiya.crmlite.core.util.results.Result;
 import com.etiya.crmlite.entities.concretes.cam.Addr;
 import com.etiya.crmlite.entities.concretes.cam.Cust;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -31,5 +37,11 @@ public interface IAddressService {
     //todo:Kullanıcı, kaydedilen adresi, adres alanı içerisinde bulunan üç nokta içerisinden “Main” butonuna basarak
     // main adresi olarak seçebilmelidir. Bu seçenek hali hazırda Main adres için pasif olmalıdır.
     Result updateAddress(Long address_id, UpdateAddressRequest updateAddressRequest);
-    
+
+    DataResult<List<GetAllCustomerAddressesResponse>> getAllCustomerAddresses(CustomerAddressRequest customerAddressRequest);
+
+    DataResult<GetByCustomerUpdateAddressResponse> customerUpdateAddress(CustomerUpdateAddressRequest customerUpdateAddressRequest,Pageable pageable);
+
+    //GetAll ama sayfalama yapıyor.
+    Page<GetAllAddressResponse> getAllWithPage(Pageable pageable);
 }

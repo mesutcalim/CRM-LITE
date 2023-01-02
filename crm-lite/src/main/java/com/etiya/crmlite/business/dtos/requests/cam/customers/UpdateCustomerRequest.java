@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotNull;
 
 
 @Data
@@ -14,9 +15,9 @@ import lombok.NoArgsConstructor;
 public class UpdateCustomerRequest {
 
     private Long customerId;
-
+    @NotNull
     private Long statusId;
-
+    @NotNull
     private Long partyRoleId;
 
     private Long customerTypeId;
