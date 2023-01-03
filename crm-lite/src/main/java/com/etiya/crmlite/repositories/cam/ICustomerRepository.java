@@ -2,9 +2,7 @@ package com.etiya.crmlite.repositories.cam;
 
 
 import com.etiya.crmlite.business.dtos.responses.cam.customers.FindCustomerResponse;
-import com.etiya.crmlite.business.dtos.responses.product.products.GetAllProductResponse;
 import com.etiya.crmlite.entities.concretes.cam.Cust;
-import com.etiya.crmlite.entities.concretes.product.Prod;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

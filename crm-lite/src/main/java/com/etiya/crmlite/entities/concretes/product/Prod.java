@@ -36,7 +36,7 @@ public class Prod extends BaseEntity {
     private int stId;
 
     @Column(name = "CMPG_ID")
-    private Long cmpgId; // --> (FK) Campaign tablosundan referans alıyor DİKKAT !!!
+    private Long cmpgId;
 
     @ManyToOne
     @JoinColumn(name = "PROD_OFR_ID")
@@ -65,7 +65,6 @@ public class Prod extends BaseEntity {
     @OneToMany(mappedBy = "prod2")
     private List<ProdRel> prodRels2;
 
-    // Test Comment Emre
-    // Test Comment Feride
+
 
 }

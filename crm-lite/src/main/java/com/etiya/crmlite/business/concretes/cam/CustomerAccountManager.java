@@ -1,11 +1,11 @@
 package com.etiya.crmlite.business.concretes.cam;
 
-import com.etiya.crmlite.business.abstracts.cam.ICustomerAccountService;
-import com.etiya.crmlite.business.abstracts.cam.ICustomerService;
-import com.etiya.crmlite.business.dtos.requests.cam.customerAccounts.*;
-import com.etiya.crmlite.business.dtos.requests.cam.customerAccounts.CreateCustomerAccountRequest;
+import com.etiya.crmlite.business.dtos.requests.cam.customerAccounts.UpdateCustomerAccountRequest;
 import com.etiya.crmlite.business.dtos.responses.cam.customerAccounts.GetAllCustomerAccountResponse;
 import com.etiya.crmlite.business.dtos.responses.cam.customerAccounts.GetByIdCustomerAccountResponse;
+import com.etiya.crmlite.business.abstracts.cam.ICustomerAccountService;
+import com.etiya.crmlite.business.abstracts.cam.ICustomerService;
+import com.etiya.crmlite.business.dtos.requests.cam.customerAccounts.CreateCustomerAccountRequest;
 import com.etiya.crmlite.core.util.results.DataResult;
 import com.etiya.crmlite.core.util.results.Result;
 import com.etiya.crmlite.core.util.results.SuccessDataResult;
@@ -16,7 +16,6 @@ import com.etiya.crmlite.repositories.cam.ICustomerAccountRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -79,7 +78,7 @@ public class CustomerAccountManager implements ICustomerAccountService {
     }
 
     @Override
-    public Result update(Long customerAccountId,UpdateCustomerAccountRequest updateCustomerAccountRequest) {
+    public Result update(Long customerAccountId, UpdateCustomerAccountRequest updateCustomerAccountRequest) {
         CustAcct custAcct = customerAccountRepository.findById(customerAccountId).orElseThrow();
         Cust cust= custAcct.getCust();
         custAcct = CustAcct.builder()

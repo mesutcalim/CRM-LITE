@@ -1,28 +1,23 @@
 package com.etiya.crmlite.business.concretes.cam;
 
-import com.etiya.crmlite.business.abstracts.cam.ICustomerAccountService;
-import com.etiya.crmlite.business.abstracts.cam.ICustomerTypeService;
-import com.etiya.crmlite.business.abstracts.cam.IPartyRoleService;
+import com.etiya.crmlite.business.abstracts.cam.ICustomerService;
 import com.etiya.crmlite.business.dtos.requests.cam.customers.CreateCustomerRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.customers.UpdateCustomerRequest;
-import com.etiya.crmlite.business.dtos.responses.cam.customerAccounts.GetAllCustomerAccountResponse;
 import com.etiya.crmlite.business.dtos.responses.cam.customers.FindCustomerResponse;
-
 import com.etiya.crmlite.business.dtos.responses.cam.customers.GetAllCustomerResponse;
 import com.etiya.crmlite.business.dtos.responses.cam.customers.GetByIdCustomerResponse;
+import com.etiya.crmlite.business.abstracts.cam.ICustomerTypeService;
+import com.etiya.crmlite.business.abstracts.cam.IPartyRoleService;
+
 import com.etiya.crmlite.core.util.exceptions.BusinessException;
 import com.etiya.crmlite.core.util.generalCodes.GeneralStatusCodes;
 import com.etiya.crmlite.core.util.mapper.ModelMapperService;
 import com.etiya.crmlite.core.util.results.*;
 import com.etiya.crmlite.entities.concretes.cam.Cust;
-import com.etiya.crmlite.business.abstracts.cam.ICustomerService;
-import com.etiya.crmlite.entities.concretes.cam.CustAcct;
 import com.etiya.crmlite.entities.concretes.cam.CustTp;
 import com.etiya.crmlite.entities.concretes.cam.PartyRole;
 import com.etiya.crmlite.repositories.cam.ICustomerRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

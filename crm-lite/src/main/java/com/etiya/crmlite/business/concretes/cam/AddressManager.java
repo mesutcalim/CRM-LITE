@@ -1,20 +1,20 @@
 package com.etiya.crmlite.business.concretes.cam;
 
-import com.etiya.crmlite.business.abstracts.cam.IAddressService;
 import com.etiya.crmlite.business.abstracts.cam.ICustomerService;
 import com.etiya.crmlite.business.dtos.requests.cam.addresses.CreateAddressRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.addresses.CustomerAddressRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.addresses.CustomerUpdateAddressRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.addresses.UpdateAddressRequest;
-import com.etiya.crmlite.business.dtos.requests.cam.customers.CreateCustomerRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.individuals.CreateAddressForIndividualRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.individuals.CreateIndividualCustomerRequest;
 import com.etiya.crmlite.business.dtos.responses.cam.addresses.GetAllAddressResponse;
 import com.etiya.crmlite.business.dtos.responses.cam.addresses.GetAllCustomerAddressesResponse;
 import com.etiya.crmlite.business.dtos.responses.cam.addresses.GetByCustomerUpdateAddressResponse;
 import com.etiya.crmlite.business.dtos.responses.cam.addresses.GetByIdAddressResponse;
+import com.etiya.crmlite.business.abstracts.cam.IAddressService;
 import com.etiya.crmlite.core.util.exceptions.BusinessException;
 import com.etiya.crmlite.core.util.mapper.ModelMapperService;
+import com.etiya.crmlite.core.util.message.IMessageService;
 import com.etiya.crmlite.core.util.results.DataResult;
 import com.etiya.crmlite.core.util.results.Result;
 import com.etiya.crmlite.core.util.results.SuccessDataResult;
@@ -37,6 +37,7 @@ public class AddressManager implements IAddressService {
     private IAddressRepository addressRepository;
     private ModelMapperService modelMapperService;
 private ICustomerService customerService;
+private IMessageService IMessageService;
 
 
     @Override
@@ -52,7 +53,7 @@ private ICustomerService customerService;
                 .streetName(addr.getStrtName())
                 .build()
         ).collect(Collectors.toList());
-        return new SuccessDataResult<>(response);
+        return new SuccessDataResult<>("Başarılı",response);
     }
 
     @Override
@@ -94,7 +95,7 @@ private ICustomerService customerService;
         return new SuccessDataResult("Adres başarı ile eklendi!");
     }
     @Override
-    public Result deleteAddress(Long address_id) {
+    public SuccessDataResult deleteAddress(Long address_id) {
         Addr addr = addressRepository.findById(address_id).orElseThrow();
 
         addr.setIsActv(0);
@@ -140,7 +141,7 @@ private ICustomerService customerService;
                 .bldgName(updateAddressRequest.getBuildingName())
                 .cntryName(updateAddressRequest.getCountryName())
                 .build();
-        //setCdate yapılacak unutma!!!
+        //setCdate yapılacak unutma //Yapıldı
         address.setCDate(this.addressRepository.getReferenceById(updateAddressRequest.getAddressId()).getCDate());
 
         this.addressRepository.save(address);
@@ -174,7 +175,7 @@ private ICustomerService customerService;
     }
 
     @Override
-    public DataResult<GetByCustomerUpdateAddressResponse> customerUpdateAddress(CustomerUpdateAddressRequest customerUpdateAddressRequest,Pageable pageable) {
+    public DataResult<GetByCustomerUpdateAddressResponse> customerUpdateAddress(CustomerUpdateAddressRequest customerUpdateAddressRequest, Pageable pageable) {
         Cust cust = customerService.getByCustomerId(customerUpdateAddressRequest.getCustomerId());
         Party party = cust.getPartyRole().getParty();
         Addr result = getByAdressId(customerUpdateAddressRequest.getAddressId());
@@ -214,12 +215,23 @@ private ICustomerService customerService;
 
     private Addr getByAdressId(Long addressId) {
         return addressRepository.findById(addressId).orElseThrow(()-> {
-            throw new BusinessException("NOT.EXİST");
+            throw new BusinessException(IMessageService.Messages("NOT.EXİST"));
         });
     }
 
     @Override
     public DataResult<List<GetAllCustomerAddressesResponse>> getAllCustomerAddresses(CustomerAddressRequest customerAddressRequest) {
-        return null;
+        List<Addr> result = this.addressRepository.findAll();
+        List<GetAllCustomerAddressesResponse> response = result.stream().map(addr -> GetAllCustomerAddressesResponse.builder()
+                .addressId(addr.getAddrId())
+                .addressDescription(addr.getAddrDesc())
+                .buildingId(addr.getBldgId())
+                .cityName(addr.getCityName())
+                .countryName(addr.getCntryName())
+                .streetId(addr.getStrtId())
+                .streetName(addr.getStrtName())
+                .build()
+        ).collect(Collectors.toList());
+        return new SuccessDataResult<>("Başarılı",response);
     }
 }

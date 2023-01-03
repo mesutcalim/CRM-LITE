@@ -4,8 +4,6 @@ import com.etiya.crmlite.business.abstracts.cam.IIndividualService;
 import com.etiya.crmlite.business.dtos.requests.cam.individuals.CreateIndividualCustomerRequest;
 import com.etiya.crmlite.core.util.results.Result;
 import lombok.AllArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 
@@ -13,7 +14,8 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @Builder
 public class ProductAddressRequest {
-    @NotNull
+    @NotNull(message = "Bu alan boş olamaz")
+    @Min(value = 1,message = "Product Id Sıfırdan Büyük Olmalıdır.")
     private Long productId;
 }
 

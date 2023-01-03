@@ -1,7 +1,7 @@
 package com.etiya.crmlite.business.concretes.cam;
 
-import com.etiya.crmlite.business.abstracts.cam.IPartyService;
 import com.etiya.crmlite.business.dtos.responses.cam.parties.GetByIdPartyResponse;
+import com.etiya.crmlite.business.abstracts.cam.IPartyService;
 import com.etiya.crmlite.core.util.results.DataResult;
 import com.etiya.crmlite.core.util.results.SuccessDataResult;
 import com.etiya.crmlite.entities.concretes.cam.Party;

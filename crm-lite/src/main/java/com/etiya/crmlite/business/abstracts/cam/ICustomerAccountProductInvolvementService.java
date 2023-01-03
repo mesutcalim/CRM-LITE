@@ -1,10 +1,10 @@
 package com.etiya.crmlite.business.abstracts.cam;
 
+import com.etiya.crmlite.business.dtos.responses.cam.customerAccountProductInvolvements.GetAllCustomerAccountProductInvolvementResponse;
+import com.etiya.crmlite.business.dtos.responses.cam.customerAccountProductInvolvements.GetByIdCustomerAccountProductInvolvementResponse;
 import com.etiya.crmlite.business.dtos.requests.cam.customerAccountProductInvolvements.CreateCustomerAccountProductInvolvementRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.customerAccountProductInvolvements.DeleteCustomerAccountProductInvolvementRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.customerAccountProductInvolvements.UpdateCustomerAccountProductInvolvementRequest;
-import com.etiya.crmlite.business.dtos.responses.cam.customerAccountProductInvolvements.GetAllCustomerAccountProductInvolvementResponse;
-import com.etiya.crmlite.business.dtos.responses.cam.customerAccountProductInvolvements.GetByIdCustomerAccountProductInvolvementResponse;
 import com.etiya.crmlite.core.util.results.DataResult;
 import com.etiya.crmlite.core.util.results.Result;
 import com.etiya.crmlite.entities.concretes.cam.CustAcctProdInvl;

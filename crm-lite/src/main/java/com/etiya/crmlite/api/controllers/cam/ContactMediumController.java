@@ -2,7 +2,6 @@ package com.etiya.crmlite.api.controllers.cam;
 
 import com.etiya.crmlite.business.abstracts.cam.IContactMediumService;
 import com.etiya.crmlite.business.dtos.requests.cam.contactMediums.CreateContactMediumRequest;
-import com.etiya.crmlite.business.dtos.requests.cam.contactMediums.DeleteContactMediumRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.contactMediums.UpdateContactMediumRequest;
 import com.etiya.crmlite.business.dtos.responses.cam.contactMediums.GetAllContactMediumResponse;
 import com.etiya.crmlite.business.dtos.responses.cam.contactMediums.GetByIdContactMediumResponse;

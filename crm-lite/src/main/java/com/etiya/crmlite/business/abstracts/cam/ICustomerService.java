@@ -1,7 +1,6 @@
 package com.etiya.crmlite.business.abstracts.cam;
 
 import com.etiya.crmlite.business.dtos.requests.cam.customers.CreateCustomerRequest;
-import com.etiya.crmlite.business.dtos.requests.cam.customers.FindCustomerRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.customers.UpdateCustomerRequest;
 import com.etiya.crmlite.business.dtos.responses.cam.customers.FindCustomerResponse;
 import com.etiya.crmlite.business.dtos.responses.cam.customers.GetAllCustomerResponse;
@@ -9,9 +8,6 @@ import com.etiya.crmlite.business.dtos.responses.cam.customers.GetByIdCustomerRe
 import com.etiya.crmlite.core.util.results.DataResult;
 import com.etiya.crmlite.core.util.results.Result;
 import com.etiya.crmlite.entities.concretes.cam.Cust;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Slice;
 
 import java.util.List;
 
@@ -19,12 +15,12 @@ public interface ICustomerService {
 
     //Kullanıcı, filtreleme alanlarından(NatID, Customer ID, Account Number, GSM Number, First Name, Last Name, Order Name) en az birini doldurana kadar “search” butonu pasif kalmalı.
     DataResult<List<FindCustomerResponse>> getCustomersByFilter(Long customerId,
-                         String firstName,
-                         String lastName,
-                         Long natId,
-                         String gsmNumber,
-                         Long customerOrderId,
-                         String accountNumber);
+                                                                String firstName,
+                                                                String lastName,
+                                                                Long natId,
+                                                                String gsmNumber,
+                                                                Long customerOrderId,
+                                                                String accountNumber);
 
     //DataResult<Page<Cust>> findAll(Pageable pageable);
 //    todo:Bu foksiyonların getirmesi gereken response şunları içermelidir:

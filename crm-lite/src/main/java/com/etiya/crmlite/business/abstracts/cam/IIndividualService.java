@@ -5,12 +5,8 @@ import com.etiya.crmlite.business.dtos.requests.cam.individuals.CreateIndividual
 import com.etiya.crmlite.business.dtos.requests.cam.individuals.UpdateIndividualRequest;
 import com.etiya.crmlite.business.dtos.responses.cam.individuals.GetAllIndividualResponse;
 import com.etiya.crmlite.business.dtos.responses.cam.individuals.GetByIdIndividualResponse;
-import com.etiya.crmlite.core.util.exceptions.BusinessException;
 import com.etiya.crmlite.core.util.results.DataResult;
 import com.etiya.crmlite.core.util.results.Result;
-import com.etiya.crmlite.core.util.results.SuccessDataResult;
-import com.etiya.crmlite.core.util.results.SuccessResult;
-import com.etiya.crmlite.entities.concretes.cam.Ind;
 
 import java.util.List;
 

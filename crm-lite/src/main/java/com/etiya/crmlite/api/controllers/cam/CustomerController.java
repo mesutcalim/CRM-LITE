@@ -2,23 +2,16 @@ package com.etiya.crmlite.api.controllers.cam;
 
 import com.etiya.crmlite.business.abstracts.cam.ICustomerService;
 import com.etiya.crmlite.business.dtos.requests.cam.customers.CreateCustomerRequest;
-import com.etiya.crmlite.business.dtos.requests.cam.customers.FindCustomerRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.customers.UpdateCustomerRequest;
-import com.etiya.crmlite.business.dtos.responses.cam.addresses.GetAllAddressResponse;
 import com.etiya.crmlite.business.dtos.responses.cam.customers.FindCustomerResponse;
 import com.etiya.crmlite.business.dtos.responses.cam.customers.GetAllCustomerResponse;
 import com.etiya.crmlite.business.dtos.responses.cam.customers.GetByIdCustomerResponse;
 import com.etiya.crmlite.core.util.results.DataResult;
 import com.etiya.crmlite.core.util.results.Result;
-import com.etiya.crmlite.entities.concretes.cam.Cust;
 import lombok.AllArgsConstructor;
-import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Slice;
 
 
 import java.util.List;

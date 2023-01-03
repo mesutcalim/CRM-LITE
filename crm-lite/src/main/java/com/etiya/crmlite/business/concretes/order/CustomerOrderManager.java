@@ -1,7 +1,7 @@
 package com.etiya.crmlite.business.concretes.order;
 
-import com.etiya.crmlite.business.abstracts.order.ICustomerOrderService;
 import com.etiya.crmlite.business.dtos.responses.order.customerOrders.GetByIdCustomerOrderResponse;
+import com.etiya.crmlite.business.abstracts.order.ICustomerOrderService;
 import com.etiya.crmlite.core.util.results.DataResult;
 import com.etiya.crmlite.core.util.results.SuccessDataResult;
 import com.etiya.crmlite.entities.concretes.order.CustOrd;

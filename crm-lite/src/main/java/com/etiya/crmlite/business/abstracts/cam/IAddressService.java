@@ -11,7 +11,6 @@ import com.etiya.crmlite.business.dtos.responses.cam.addresses.GetByCustomerUpda
 import com.etiya.crmlite.business.dtos.responses.cam.addresses.GetByIdAddressResponse;
 import com.etiya.crmlite.core.util.results.DataResult;
 import com.etiya.crmlite.core.util.results.Result;
-import com.etiya.crmlite.entities.concretes.cam.Addr;
 import com.etiya.crmlite.entities.concretes.cam.Cust;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -40,7 +39,7 @@ public interface IAddressService {
 
     DataResult<List<GetAllCustomerAddressesResponse>> getAllCustomerAddresses(CustomerAddressRequest customerAddressRequest);
 
-    DataResult<GetByCustomerUpdateAddressResponse> customerUpdateAddress(CustomerUpdateAddressRequest customerUpdateAddressRequest,Pageable pageable);
+    DataResult<GetByCustomerUpdateAddressResponse> customerUpdateAddress(CustomerUpdateAddressRequest customerUpdateAddressRequest, Pageable pageable);
 
     //GetAll ama sayfalama yapıyor.
     Page<GetAllAddressResponse> getAllWithPage(Pageable pageable);

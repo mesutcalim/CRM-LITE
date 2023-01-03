@@ -1,9 +1,6 @@
 package com.etiya.crmlite.business.concretes.cam;
 
-import com.etiya.crmlite.business.abstracts.cam.ICustomerService;
-import com.etiya.crmlite.business.abstracts.cam.IIndividualService;
-import com.etiya.crmlite.business.abstracts.cam.IPartyRoleService;
-import com.etiya.crmlite.business.abstracts.cam.IPartyService;
+import com.etiya.crmlite.business.abstracts.cam.*;
 import com.etiya.crmlite.business.dtos.requests.cam.individuals.CreateIndividualCustomerRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.individuals.CreateIndividualRequest;
 import com.etiya.crmlite.business.dtos.requests.cam.individuals.UpdateIndividualRequest;
@@ -15,8 +12,8 @@ import com.etiya.crmlite.core.util.results.DataResult;
 import com.etiya.crmlite.core.util.results.Result;
 import com.etiya.crmlite.core.util.results.SuccessDataResult;
 import com.etiya.crmlite.core.util.results.SuccessResult;
+import com.etiya.crmlite.business.abstracts.cam.ICustomerService;
 import com.etiya.crmlite.entities.concretes.cam.*;
-import com.etiya.crmlite.business.abstracts.cam.*;
 import com.etiya.crmlite.repositories.cam.IIndividualRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

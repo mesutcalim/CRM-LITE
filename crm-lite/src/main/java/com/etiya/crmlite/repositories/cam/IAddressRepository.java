@@ -12,5 +12,7 @@ public interface IAddressRepository extends JpaRepository<Addr,Long> {
     
     @Query("Select new com.etiya.crmlite.business.dtos.responses.cam.addresses.GetAllAddressResponse(a.addrId,a.strtId,a.bldgId,a.addrDesc,a.cityName,a.strtName,a.cntryName) from Addr as a")
     Page<GetAllAddressResponse> getAllWithPage(Pageable pageable);
+
+    boolean existsAddrsByAddrId(Long addressId);
 }
 

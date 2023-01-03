@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.Range;
 
 import javax.validation.constraints.NotNull;
 
@@ -12,16 +13,20 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @Builder
 public class UpdateAddressRequest {
+    @NotNull(message = "Bu alan boş olamaz")
     private Long addressId;
+    @NotNull(message = "Bu alan boş olamaz")
     private Long streetId;
-    @NotNull
+    @NotNull(message = "Bu alan boş olamaz")
     private Long buildingId;
-    @NotNull
+    @NotNull(message = "Bu alan boş olamaz")
     private String addressDescription;
+    @NotNull(message = "Bu alan boş olamaz")
+    @Range(min = 0,max = 1,message = "0 veya 1 şeklinde değer giriniz.")
     private int isActive;
-    @NotNull
+    @NotNull(message = "Bu alan boş olamaz")
     private String cityName;
-    @NotNull
+    @NotNull(message = "Bu alan boş olamaz")
     private String streetName;
     private String buildingName;
     private String countryName;
