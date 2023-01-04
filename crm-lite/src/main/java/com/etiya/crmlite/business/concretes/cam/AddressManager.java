@@ -24,6 +24,7 @@ import com.etiya.crmlite.entities.concretes.cam.Cust;
 import com.etiya.crmlite.entities.concretes.cam.Party;
 import com.etiya.crmlite.repositories.cam.IAddressRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.context.MessageSource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -35,10 +36,9 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 public class AddressManager implements IAddressService {
     private IAddressRepository addressRepository;
-    private ModelMapperService modelMapperService;
-private ICustomerService customerService;
-private IMessageService IMessageService;
-
+    private ICustomerService customerService;
+    private MessageSource messageSource;
+    private IMessageService messageService;
 
     @Override
     public DataResult<List<GetAllAddressResponse>> getAll() {
@@ -53,7 +53,7 @@ private IMessageService IMessageService;
                 .streetName(addr.getStrtName())
                 .build()
         ).collect(Collectors.toList());
-        return new SuccessDataResult<>("Başarılı",response);
+        return new SuccessDataResult<>(messageService.Messages("SUCCESS"),response);
     }
 
     @Override
@@ -74,10 +74,10 @@ private IMessageService IMessageService;
                 .streetId(result.getStrtId())
                 .streetName(result.getStrtName())
                 .build();
-        return new SuccessDataResult<>(response);
+        return new SuccessDataResult<>(messageService.Messages("GET.ADDRESS"),response);
     }
     @Override
-    public Result addAddress(CreateAddressRequest createAddressRequest) {
+    public DataResult<Addr> addAddress(CreateAddressRequest createAddressRequest) {
         Addr addr = new Addr().builder()
                 .rowId(createAddressRequest.getRowId())
                 .dataTypeId(createAddressRequest.getDataTypeId())
@@ -90,9 +90,10 @@ private IMessageService IMessageService;
                 .bldgName(createAddressRequest.getBuildingName())
                 .cntryName(createAddressRequest.getCountryName())
                 .build();
-        addressRepository.save(addr);
+        Addr response =addressRepository.save(addr);
 
-        return new SuccessDataResult("Adres başarı ile eklendi!");
+
+        return new SuccessDataResult("ADDRESS.ADDED",response);
     }
     @Override
     public SuccessDataResult deleteAddress(Long address_id) {
@@ -103,7 +104,7 @@ private IMessageService IMessageService;
         addr.setCDate(addressRepository.getReferenceById(addr.getAddrId()).getCDate());//Create date güncellenmesin diye esti cdate set edildi.
 
         this.addressRepository.save(addr);
-        return new SuccessDataResult("Adres başarı ile silindi!");
+        return new SuccessDataResult("ADDRESS.DELETED");
     }
 
 //    @Override
@@ -206,7 +207,7 @@ private IMessageService IMessageService;
                 .build();
 
 
-        return new SuccessDataResult<>("Success.Update.Customer.Address",response);
+        return new SuccessDataResult<>("SUCCESS.UPDATE.CUSTOMER.ADDRESS",response);
     }
 
     private void add(Addr addr) {
@@ -215,7 +216,7 @@ private IMessageService IMessageService;
 
     private Addr getByAdressId(Long addressId) {
         return addressRepository.findById(addressId).orElseThrow(()-> {
-            throw new BusinessException(IMessageService.Messages("NOT.EXİST"));
+            throw new BusinessException(messageService.Messages("ADDRESS.NOT.EXIST"));
         });
     }
 
@@ -232,6 +233,6 @@ private IMessageService IMessageService;
                 .streetName(addr.getStrtName())
                 .build()
         ).collect(Collectors.toList());
-        return new SuccessDataResult<>("Başarılı",response);
+        return new SuccessDataResult<>("SUCCESS",response);
     }
 }

@@ -1,5 +1,6 @@
 package com.etiya.crmlite.business.dtos.requests.cam.addresses;
 
+import com.etiya.crmlite.core.util.message.MessageManager;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,8 +16,9 @@ import javax.validation.constraints.Size;
 @NoArgsConstructor
 @Builder
 public class CreateAddressRequest {
-    @NotNull(message = "Bu alan boş olamaz.")
-    @Min(value = 0, message = "Row Id Sıfırdan Küçük Olamaz.")
+
+   @NotNull(message = "Bu alan boş olamaz.")
+    @Min(value = 0, message = "Sıfırdan Küçük Olamaz.")
     private Long rowId; // gn_tp
     @NotNull(message = "Bu alan boş olamaz.")
     @Min(value = 0, message = "Data Type Id Sıfırdan Küçük Olamaz.")
